@@ -25,7 +25,7 @@ def print_topic(topics, id=None):
         try:
             topic = topics[id]
             sep = '-'*(len(topic['title'])+10)
-            print(f"TOPIC {id}:{topic['title']}\n{sep}")
+            print(f"TOPIC {id}: {topic['title']}\n{sep}")
             print(f"Description: {topic['description']}\n")
             print(f"Narrative: {topic['narrative']}\n")
         except:
@@ -34,7 +34,7 @@ def print_topic(topics, id=None):
         for id in ids:
             topic = topics[id]
             sep = '-'*(len(topic['title'])+10)
-            print(f"TOPIC {id}:{topic['title']}\n{sep}")
+            print(f"TOPIC {id}: {topic['title']}\n{sep}")
             print(f"Description: {topic['description']}\n")
 
 
