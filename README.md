@@ -8,7 +8,12 @@ Deadline: 21 December, 23:59pm
 
 ## Relevant papers
 
+- *"Read Smart Stuff here"* by Smarty McSmartFace
+- TODO
+
 ## Links
+
+### Anserini/Pyserini
 
 - [Anserini](https://github.com/castorini/anserini)
 - [Pyserini](https://github.com/castorini/pyserini)
@@ -17,7 +22,9 @@ Deadline: 21 December, 23:59pm
 - [Anserini (eval) tools](https://github.com/castorini/anserini-tools)
 - [Anserini pre-built indexes](https://git.uwaterloo.ca/jimmylin/anserini-indexes)
     * N.B. also contains a readme.txt for the command to build the index with Anserini!
-- [Blog post on how to use TREC eval](http://www.rafaelglater.com/en/post/learn-how-to-use-trec_eval-to-evaluate-your-information-retrieval-system)
+- [Anserini at TREC 2018: CENTRE, Common Core, and News Tracks]( https://cs.uwaterloo.ca/~jimmylin/publications/Yang_Lin_TREC2018.pdf )
+
+### Indexing
 
 Indexing on Washington Post:
 
@@ -43,11 +50,16 @@ Our indexing command:
 target/appassembler/bin/IndexCollection -collection WashingtonPostCollection -input ../WashingtonPost.v2/data -index indexes/lucene-wapost.v2.pos+docvectors+raw -generator WashingtonPostGenerator -threads 1 -storePositions -storeDocvectors -storeRaw
 ```
 
+### Evaluation
+
+- [Blog post on how to use TREC eval](http://www.rafaelglater.com/en/post/learn-how-to-use-trec_eval-to-evaluate-your-information-retrieval-system)
+- [Qrels format](https://trec.nist.gov/data/qrels_eng/)
+
 Topics and qrels for Common Core 2018:
 
 - [CC2018 Topics](https://trec.nist.gov/data/core/topics2018.txt)
 - [CC2018 Qrels]( https://trec.nist.gov/data/core/qrels2018.txt )
-- Also see [here]( https://github.com/castorini/anserini/tree/master/src/main/resources/topics-and-qrels )
+- [Anserini already has these built in]( https://github.com/castorini/anserini/tree/master/src/main/resources/topics-and-qrels )
 
 
 ## Fixes
