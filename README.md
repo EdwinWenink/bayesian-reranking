@@ -46,8 +46,8 @@ target/appassembler/bin/IndexCollection -collection WashingtonPostCollection -in
 Topics and qrels for Common Core 2018:
 
 - [CC2018 Topics](https://trec.nist.gov/data/core/topics2018.txt)
-- [CC2018 Qrels](https://trec.nist.gov/data/core/qrels2018.txt)
-- Also see [here](https://github.com/castorini/anserini/tree/master/src/main/resources/topics-and-qrels)
+- [CC2018 Qrels]( https://trec.nist.gov/data/core/qrels2018.txt )
+- Also see [here]( https://github.com/castorini/anserini/tree/master/src/main/resources/topics-and-qrels )
 
 
 ## Fixes
@@ -56,4 +56,4 @@ Error after importing SimpleSearcher from pyserini.search
 
 > ImportError: DLL load failed: Kan opgegeven module niet vinden.
 
-[Solution]( https://stackoverflow.com/questions/20970732/jnius-1-1-i mport-error ): put `C:\Program Files (x86)\Java\jdk[YOUR JDK VERSION]\jre\bin\server` in your SYSTEM variables (not your user variables).
+[Solution]( https://stackoverflow.com/questions/20970732/jnius-1-1-import-error ): put `C:\Program Files (x86)\Java\jdk[YOUR JDK VERSION]\jre\bin\server` in your SYSTEM variables (not your user variables).

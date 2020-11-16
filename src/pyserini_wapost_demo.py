@@ -14,6 +14,30 @@ def top_n_words(doc_vector, n=10):
         if i==n: break
 
 
+def print_topic(topics, id=None):
+    """
+    By default prints information on all topics
+    If valid id is provided, prints full info on a single topic
+    """
+    print(f'{len(topics)} queries total\n')
+    ids = topics.keys()
+    if id:
+        try:
+            topic = topics[id]
+            sep = '-'*(len(topic['title'])+10)
+            print(f"TOPIC {id}:{topic['title']}\n{sep}")
+            print(f"Description: {topic['description']}\n")
+            print(f"Narrative: {topic['narrative']}\n")
+        except:
+            print("Provide valid id")
+    else:
+        for id in ids:
+            topic = topics[id]
+            sep = '-'*(len(topic['title'])+10)
+            print(f"TOPIC {id}:{topic['title']}\n{sep}")
+            print(f"Description: {topic['description']}\n")
+
+
 # --------------
 # SimpleSearcher
 # --------------
@@ -60,13 +84,14 @@ top_n_words(doc_vector, 10)
 # ----------------
 # Topics and Qrels 
 # ----------------
+from pyserini.search import get_topics
+topics = get_topics('core18')
 
-# Things to look at from other demo's
+# Get some information on all topics
+print_topic(topics)
 
-## Get TOPICS (cf. TREC parlance)
-#from pyserini.search import get_topics
-#topics = get_topics('msmarco_passage_dev_subset')
-#print(f'{len(topics)} queries total')
+# More detailed info on the black bear example
+print_topic(topics, id=336)
 
 # ----------------
 # Evaluation
