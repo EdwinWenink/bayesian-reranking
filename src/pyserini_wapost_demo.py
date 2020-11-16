@@ -20,7 +20,8 @@ searcher.set_bm25(0.9, 0.4)  # BM25 params
 
 # hits contains: docid, retrieval score, and document content
 # N.B. "black bear attacks" is the title of topic 336
-hits = searcher.search('black bear attacks')
+query = 'black bear attacks'
+hits = searcher.search(query)
 
 # Print first 10 hits
 print_top_n_results(hits, 10)
@@ -52,7 +53,7 @@ doc_vector = reader.get_document_vector(id)
 top_n_words(doc_vector, 10)
 
 # ----------------
-# Topics and Qrels 
+# Topics
 # ----------------
 from pyserini.search import get_topics
 topics = get_topics('core18')
@@ -67,7 +68,13 @@ print_topic(topics, id=336)
 # Evaluation
 # ----------------
 
-# Use trec_eval for evaluation
+# Use trec-eval for evaluation
+# Produce a file suitable to be used with trec-eval
+doc_ids = [ hit.docid for hit in hits]
+scores = [ hit.score for hit in hits]
+query_ids = ['336']  # in this case only our test query
+run_name = "DEMO"
+write_rankings(query_ids, doc_ids, scores, run_name)
 
 # ----------------
 # Reranking

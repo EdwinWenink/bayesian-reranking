@@ -1,3 +1,6 @@
+"""
+Utility functions
+"""
 
 def print_top_n_results(hits, n):
     for i in range(0, n):
@@ -16,6 +19,9 @@ def print_topic(topics, id=None):
     """
     By default prints information on all topics
     If valid id is provided, prints full info on a single topic
+
+    -------
+    Returns None
     """
     print(f'{len(topics)} queries total\n')
     ids = topics.keys()
@@ -35,3 +41,17 @@ def print_topic(topics, id=None):
             print(f"TOPIC {id}: {topic['title']}\n{sep}")
             print(f"Description: {topic['description']}\n")
 
+
+def write_rankings(query_ids, doc_ids, scores, run_name):
+    """
+    Format: query-id Q0 document-id rank score RUN-NAME
+    Assumes inputs are already ordered on rank
+    Length of doc_ids and scores should match
+
+    -----
+    Returns None
+    """
+    with open(f"../results/results-{run_name}.txt", encoding="utf-8", mode="w") as f:
+        for q in query_ids:
+            for i in range(len(doc_ids)):
+                f.write(f"{q} Q0 {doc_ids[i]} {i+1} {scores[i]} {run_name}\n")

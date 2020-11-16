@@ -52,6 +52,7 @@ target/appassembler/bin/IndexCollection -collection WashingtonPostCollection -in
 
 ### Evaluation
 
+- [Trec Eval](https://github.com/usnistgov/trec_eval)
 - [Blog post on how to use TREC eval](http://www.rafaelglater.com/en/post/learn-how-to-use-trec_eval-to-evaluate-your-information-retrieval-system)
 - [Qrels format](https://trec.nist.gov/data/qrels_eng/)
 
