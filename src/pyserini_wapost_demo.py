@@ -1,6 +1,8 @@
 import os
 import pyserini
-from utils import *
+from utils import Utils
+
+utils = Utils()
 
 # --------------
 # SimpleSearcher
@@ -24,7 +26,7 @@ query = 'black bear attacks'
 hits = searcher.search(query)
 
 # Print first 10 hits
-print_top_n_results(hits, 10)
+utils.print_top_n_results(hits, 10)
 
 # ----------------
 # IndexReaderUtils
@@ -50,7 +52,7 @@ analyzed = reader.analyze(doc)
 
 # Raw document VECTOR is also stored
 doc_vector = reader.get_document_vector(id)
-top_n_words(doc_vector, 10)
+utils.top_n_words(doc_vector, 10)
 
 # ----------------
 # Topics
@@ -59,10 +61,10 @@ from pyserini.search import get_topics
 topics = get_topics('core18')
 
 # Get some information on all topics
-print_topic(topics)
+utils.print_topic(topics)
 
 # More detailed info on the black bear example
-print_topic(topics, id=336)
+utils.print_topic(topics, id=336)
 
 # ----------------
 # Evaluation
@@ -74,7 +76,7 @@ doc_ids = [ hit.docid for hit in hits]
 scores = [ hit.score for hit in hits]
 query_ids = ['336']  # in this case only our test query
 run_name = "DEMO"
-write_rankings(query_ids, doc_ids, scores, run_name)
+utils.write_rankings(query_ids, doc_ids, scores, run_name)
 
 # ----------------
 # Reranking
