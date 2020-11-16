@@ -1,0 +1,43 @@
+2020-11-16 11:52:22,972 INFO  [main] index.IndexCollection (IndexCollection.java:650) - Setting log level to INFO
+2020-11-16 11:52:22,988 INFO  [main] index.IndexCollection (IndexCollection.java:653) - Starting indexer...
+2020-11-16 11:52:22,988 INFO  [main] index.IndexCollection (IndexCollection.java:654) - ============ Loading Parameters ============
+2020-11-16 11:52:22,989 INFO  [main] index.IndexCollection (IndexCollection.java:655) - DocumentCollection path: ../WashingtonPost.v2/data
+2020-11-16 11:52:22,989 INFO  [main] index.IndexCollection (IndexCollection.java:656) - CollectionClass: WashingtonPostCollection
+2020-11-16 11:52:22,990 INFO  [main] index.IndexCollection (IndexCollection.java:657) - Generator: WashingtonPostGenerator
+2020-11-16 11:52:22,990 INFO  [main] index.IndexCollection (IndexCollection.java:658) - Threads: 1
+2020-11-16 11:52:22,991 INFO  [main] index.IndexCollection (IndexCollection.java:659) - Stemmer: porter
+2020-11-16 11:52:22,991 INFO  [main] index.IndexCollection (IndexCollection.java:660) - Keep stopwords? false
+2020-11-16 11:52:22,992 INFO  [main] index.IndexCollection (IndexCollection.java:661) - Stopwords:  null
+2020-11-16 11:52:22,992 INFO  [main] index.IndexCollection (IndexCollection.java:662) - Store positions? true
+2020-11-16 11:52:22,993 INFO  [main] index.IndexCollection (IndexCollection.java:663) - Store docvectors? true
+2020-11-16 11:52:22,993 INFO  [main] index.IndexCollection (IndexCollection.java:664) - Store document "contents" field? false
+2020-11-16 11:52:22,994 INFO  [main] index.IndexCollection (IndexCollection.java:665) - Store document "raw" field? true2020-11-16 11:52:22,994 INFO  [main] index.IndexCollection (IndexCollection.java:666) - Optimize (merge segments)? false2020-11-16 11:52:22,995 INFO  [main] index.IndexCollection (IndexCollection.java:667) - Whitelist: null
+2020-11-16 11:52:22,995 INFO  [main] index.IndexCollection (IndexCollection.java:687) - Directly building Lucene indexes...
+2020-11-16 11:52:22,995 INFO  [main] index.IndexCollection (IndexCollection.java:688) - Index path: indexes/lucene-wapost.v2.pos+docvectors+raw
+2020-11-16 11:52:23,034 INFO  [main] index.IndexCollection (IndexCollection.java:737) - ============ Indexing Collection ============
+2020-11-16 11:52:23,363 INFO  [main] index.IndexCollection (IndexCollection.java:798) - Thread pool with 1 threads initialized.
+2020-11-16 11:52:23,363 INFO  [main] index.IndexCollection (IndexCollection.java:800) - Initializing collection in ..\WashingtonPost.v2\data
+2020-11-16 11:52:23,385 INFO  [main] index.IndexCollection (IndexCollection.java:803) - 1 file found
+2020-11-16 11:52:23,385 INFO  [main] index.IndexCollection (IndexCollection.java:804) - Starting to index...
+2020-11-16 11:53:23,389 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 40.000 documents indexed
+2020-11-16 11:54:23,392 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 80.000 documents indexed
+2020-11-16 11:55:23,393 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 120.000 documents indexed
+2020-11-16 11:56:23,396 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 160.000 documents indexed
+2020-11-16 11:57:23,398 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 200.000 documents indexed
+2020-11-16 11:58:23,401 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 250.000 documents indexed
+2020-11-16 11:59:23,403 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 300.000 documents indexed
+2020-11-16 12:00:23,406 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 350.000 documents indexed
+2020-11-16 12:01:23,409 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 390.000 documents indexed
+2020-11-16 12:02:23,412 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 430.000 documents indexed
+2020-11-16 12:03:23,414 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 460.000 documents indexed
+2020-11-16 12:04:23,416 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 500.000 documents indexed
+2020-11-16 12:05:23,420 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 530.000 documents indexed
+2020-11-16 12:06:23,422 INFO  [main] index.IndexCollection (IndexCollection.java:822) - 570.000 documents indexed
+2020-11-16 12:08:04,935 INFO  [main] index.IndexCollection (IndexCollection.java:888) - Indexing Complete! 595.031 documents indexed
+2020-11-16 12:08:04,936 INFO  [main] index.IndexCollection (IndexCollection.java:889) - ============ Final Counter Values ============
+2020-11-16 12:08:04,936 INFO  [main] index.IndexCollection (IndexCollection.java:890) - indexed:          595.031
+2020-11-16 12:08:04,937 INFO  [main] index.IndexCollection (IndexCollection.java:891) - unindexable:            0
+2020-11-16 12:08:04,938 INFO  [main] index.IndexCollection (IndexCollection.java:892) - empty:                  6
+2020-11-16 12:08:04,938 INFO  [main] index.IndexCollection (IndexCollection.java:893) - skipped:                0
+2020-11-16 12:08:04,938 INFO  [main] index.IndexCollection (IndexCollection.java:894) - errors:                 0
+2020-11-16 12:08:05,083 INFO  [main] index.IndexCollection (IndexCollection.java:897) - Total 595.031 documents indexed in 00:15:41
