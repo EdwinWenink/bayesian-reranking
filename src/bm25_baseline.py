@@ -42,7 +42,10 @@ class BaselineBM25():
         return self.topics
 
     def get_batch_hits(self):
-        return self.batch_hits()
+        return self.batch_hits
+
+    def get_index_loc(self):
+        return self.index_loc
 
 if __name__ == "__main__":
     bm25 = BaselineBM25(k=1000)
