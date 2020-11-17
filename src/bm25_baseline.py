@@ -27,6 +27,8 @@ k = 10  # number of hits to return TODO what should this be?
 # hits contains: docid, retrieval score, and document content
 batch_hits = searcher.batch_search(queries, query_ids)
 
+# Inspect results for first query
+print("Scores for first query:")
 utils.print_top_n_results(batch_hits[query_ids[0]], 10)
 
 # Produce a file suitable to be used with trec-eval

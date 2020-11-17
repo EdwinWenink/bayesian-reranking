@@ -62,3 +62,4 @@ class Utils():
             for q in query_ids:
                 for i in range(len(doc_ids)):
                     f.write(f"{q} Q0 {doc_ids[i]} {i+1} {scores[i]} {run_name}\n")
+        print(f"Wrote results to /results/results-{run_name}.txt")
