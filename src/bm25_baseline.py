@@ -23,7 +23,7 @@ query_ids = [ str(id) for id  in topics.keys() ]
 queries = [ topic['title'] for topic in topics.values()]
 
 # Perform batch search on all queries
-k = 10  # number of hits to return TODO what should this be?
+k = 1000  # number of hits to return TODO what should this be?
 # hits contains: docid, retrieval score, and document content
 batch_hits = searcher.batch_search(queries, query_ids)
 
@@ -32,7 +32,14 @@ print("Scores for first query:")
 utils.print_top_n_results(batch_hits[query_ids[0]], 10)
 
 # Produce a file suitable to be used with trec-eval
-doc_ids = [ hit.docid for hits in batch_hits.values() for hit in hits ]
-scores = [ hit.score for hits in batch_hits.values() for hit in hits ]
+
+# Following two lines produce flattened lists, which is not handy
+#doc_ids = [ hit.docid for hits in batch_hits.values() for hit in hits ]
+#scores = [ hit.score for hits in batch_hits.values() for hit in hits ]
+
+# Have query results in a sub-list
+doc_ids = [ [ hit.docid for hit in hits] for hits in batch_hits.values() ]
+scores = [ [ hit.score for hit in hits] for hits in batch_hits.values() ]
+
 run_name = "BASELINE"
 utils.write_rankings(query_ids, doc_ids, scores, run_name)

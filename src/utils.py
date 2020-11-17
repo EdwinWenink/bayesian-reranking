@@ -49,17 +49,38 @@ class Utils():
                 print(f"Description: {topic['description']}\n")
 
 
-    def write_rankings(self, query_ids, doc_ids, scores, run_name):
+    def write_ranking(self, query_id, doc_ids, scores, run_name):
         """
-        Format: query-id Q0 document-id rank score RUN-NAME
+        Writes ranking for results of a *single* query
+        
         Assumes inputs are already ordered on rank
         Length of doc_ids and scores should match
 
+        Format: query-id Q0 document-id rank score RUN-NAME
         -----
         Returns None
         """
         with open(f"../results/results-{run_name}.txt", encoding="utf-8", mode="w") as f:
-            for q in query_ids:
-                for i in range(len(doc_ids)):
-                    f.write(f"{q} Q0 {doc_ids[i]} {i+1} {scores[i]} {run_name}\n")
+            for i in range(len(doc_ids)):
+                f.write(f"{query_id} Q0 {doc_ids[i]} {i+1} {scores[i]} {run_name}\n")
         print(f"Wrote results to /results/results-{run_name}.txt")
+
+
+    def write_rankings(self, query_ids, doc_ids, scores, run_name):
+        """
+        Writes ranking for results of *multiple* queries
+
+        doc_ids and scores should be lists with len(query_ids) sublists
+        These sublists are are assumed to be sorted on rank
+        and should have the same length
+
+        Format: query-id Q0 document-id rank score RUN-NAME
+        -----
+        Returns None
+        """
+        with open(f"../results/results-{run_name}.txt", encoding="utf-8", mode="w") as f:
+            for i, query_id in enumerate(query_ids):
+                for j in range(len(doc_ids[i])):
+                    f.write(f"{query_id} Q0 {doc_ids[i][j]} {j+1} {scores[i][j]} {run_name}\n")
+        print(f"Wrote results to /results/results-{run_name}.txt")
+

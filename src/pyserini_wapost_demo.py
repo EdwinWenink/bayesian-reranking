@@ -74,9 +74,10 @@ utils.print_topic(topics, id=336)
 # Produce a file suitable to be used with trec-eval
 doc_ids = [ hit.docid for hit in hits]
 scores = [ hit.score for hit in hits]
-query_ids = ['336']  # in this case only our test query
+query_id = '336'  # in this case only our test query
 run_name = "DEMO"
-utils.write_rankings(query_ids, doc_ids, scores, run_name)
+# Following function only works for a single query
+utils.write_ranking(query_id, doc_ids, scores, run_name)
 
 # ----------------
 # Reranking
