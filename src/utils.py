@@ -4,11 +4,17 @@ Utility functions
 
 class Utils():
     def print_top_n_results(self, hits, n):
+        """
+        Works for results on a *single* query
+        """
         for i in range(0, n):
             print(f'{i+1:2} {hits[i].docid:15} {hits[i].score:.5f}')
 
 
     def top_n_words(self, doc_vector, n=10):
+        """
+        Works for results on a *single* query
+        """
         # Values of doc vector can include None, which blocks comparison
         # Make this sortable by including this as a Boolean
         for i, (k, v) in enumerate(sorted(doc_vector.items(), key=lambda x: (x[1] is not None, x[1]), reverse=True)):
