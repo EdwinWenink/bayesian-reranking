@@ -23,9 +23,11 @@ query_ids = [ str(id) for id  in topics.keys() ]
 queries = [ topic['title'] for topic in topics.values()]
 
 # Perform batch search on all queries
-k = 1000  # number of hits to return TODO what should this be?
+# TODO what should this be?
+# I think baseline regressions use *all* results
+k = 1000  # number of hits to return 
 # hits contains: docid, retrieval score, and document content
-batch_hits = searcher.batch_search(queries, query_ids)
+batch_hits = searcher.batch_search(queries, query_ids, k = k)
 
 # Inspect results for first query
 print("Scores for first query:")
