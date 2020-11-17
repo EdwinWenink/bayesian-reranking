@@ -15,7 +15,7 @@ index_loc = '../../anserini/indexes/lucene-wapost.v2.pos+docvectors+raw'
 searcher = SimpleSearcher(index_loc)
 
 # Configure search options and repeat the same query
-searcher.set_bm25(0.9, 0.4)  # BM25 params
+searcher.set_bm25(k1=0.9, b=0.4)  # BM25 params
 #searcher.set_rm3(10, 10, 0.5)  # relevance feedback
 
 topics = get_topics('core18')
@@ -23,7 +23,6 @@ query_ids = [ str(id) for id  in topics.keys() ]
 queries = [ topic['title'] for topic in topics.values()]
 
 # Perform batch search on all queries
-# TODO what should this be?
 # I think baseline regressions use *all* results
 k = 1000  # number of hits to return 
 # hits contains: docid, retrieval score, and document content
@@ -40,8 +39,7 @@ utils.print_top_n_results(batch_hits[query_ids[0]], 10)
 #scores = [ hit.score for hits in batch_hits.values() for hit in hits ]
 
 # Have query results in a sub-list
-doc_ids = [ [ hit.docid for hit in hits] for hits in batch_hits.values() ]
-scores = [ [ hit.score for hit in hits] for hits in batch_hits.values() ]
-
+doc_ids = { query_id: [ hit.docid for hit in hits] for query_id, hits in batch_hits.items() }
+scores = { query_id: [ hit.score for hit in hits] for query_id, hits in batch_hits.items() }
 run_name = "BASELINE"
 utils.write_rankings(query_ids, doc_ids, scores, run_name)
