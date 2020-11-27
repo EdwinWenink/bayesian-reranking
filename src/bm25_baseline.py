@@ -6,7 +6,9 @@ on the WashingtonPost corpus, using Common Core 2018 topics
 import os
 import pyserini
 from utils import Utils
-from pyserini.search import SimpleSearcher, get_topics
+import pyserini
+from pyserini.search import SimpleSearcher
+#from pyserini.search import SimpleSearcher, get_topics
 
 class BaselineBM25():
 
@@ -31,6 +33,10 @@ class BaselineBM25():
         # Inspect results for first query
         print("Scores for first query:")
         self.utils.print_top_n_results(self.batch_hits[query_ids[0]], 10)
+
+        print(self.batch_hits, queries[0], 10)
+        
+        #self.utils.analyze(self.batch_hits, queries[0], 10)
 
         # Produce a file suitable to be used with trec-eval
         doc_ids = { query_id: [ hit.docid for hit in hits] for query_id, hits in self.batch_hits.items() }
