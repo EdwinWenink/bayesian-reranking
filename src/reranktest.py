@@ -17,14 +17,22 @@ from functools import partial
 
 class Bayesian_Reranker():
     
-    def __init__(self, seed=0, max_iter=1000):
+    def __init__(self, strategy="GREEDY", seed=0, max_iter=25):
         self.seed = seed
         self.max_iter = max_iter
         self.utils = Utils()
 
+        # Amount of documents to rank and rerank
+        self.N= 100
+
+        # Select a strategy for weighing final topics
+        self.strategy = strategy
+    
+        # K to use in TOP-K-AVG strategy
+        self.top_k = 10 
+
         # TODO ideally we don't want to first rank every time for the reranking 
-        # Either integrate the reranking in the original ranking; or load a pre-existing ranking 
-        self.baseline = BaselineBM25(k=20)
+        self.baseline = BaselineBM25(k=self.N)
         self.baseline.rank()
 
         # For each topic, the system outputs N retrieved articles.
@@ -106,12 +114,14 @@ class Bayesian_Reranker():
         return docs_per_topic
 
         """
+        Example:
         defaultdict(<class 'list'>, {
             0: [(array([ 0,  1,  6, 13, 15, 16, 17, 18], dtype=int64),)],
             1: [(array([ 3,  5,  7, 10, 11, 12, 14, 19], dtype=int64),)],
             2: [(array([4, 8, 9], dtype=int64),)], 
             3: [(array([2], dtype=int64),)]})
         """
+
     #helper functions
     
     #finds longest list
@@ -130,41 +140,34 @@ class Bayesian_Reranker():
        
         return merge_list
 
-    def weigh_topics(self, docs_per_topic_dict, doc_scores, doc_ids):
-        avg_scores_and_ids = []
-        highest_scores_and_ids = []
+    def weigh_topics(self, docs_per_topic, doc_scores, doc_ids, strategy="GREEDY", top_k=10):
 
-        #calculate weighted average of each subtopic based on first k results of subtopic
-        avg_based_on_first_k = 3
+        scores_and_ids = []
 
-        #loop over dictionairy, so for each subtopic
-        for key in docs_per_topic_dict:
-            docs_topic_sub = docs_per_topic_dict[key]
-            #print(docs_topic_sub)
+        #loop over dictionary, so for each subtopic
+        for key in docs_per_topic:
             doc_scores_sub = []
             doc_ids_sub = []
-            for x in docs_topic_sub:
-            #for x in np.nditer(a):
+            for x in docs_per_topic[key]:
                 doc_scores_sub.append(doc_scores[x])
                 doc_ids_sub.append(doc_ids[x])
             
             #deze twee lijsten zijn nodig voor de 2 verschillende rankingen
             #om te sorteren op weighted average of first k
-            avg_scores_and_ids.append((sum(doc_scores_sub[:avg_based_on_first_k])/len(doc_scores_sub[:avg_based_on_first_k]), doc_ids_sub, doc_scores_sub))
-            #greedy
-            highest_scores_and_ids.append(((doc_scores_sub[0]), (doc_ids_sub), doc_scores_sub))    
+            if strategy == "TOP-K-AVG":
+                scores_and_ids.append((sum(doc_scores_sub[:top_k])/len(doc_scores_sub[:top_k]), doc_ids_sub, doc_scores_sub))
+            elif strategy == "GREEDY":
+                scores_and_ids.append(((doc_scores_sub[0]), (doc_ids_sub), doc_scores_sub))    
+            else:
+                print("Strategy not defined")
 
-        #hier kan je dus ook kiezen en switchen of je op gemiddelde score of hoogste 1e score wil ranken
-        #sorted based on first element of tuple
-        return sorted(avg_scores_and_ids,key=itemgetter(0), reverse=True)
-        #return sorted(highest_scores_and_ids,key=itemgetter(0), reverse=True)
+        return sorted(scores_and_ids, key=itemgetter(0), reverse=True)
 
     def reranking_merge(self, weighted_tuple_lst):
         final_list_ids = []
         final_list_scores = []
         ordered_topic_ids = []
         ordered_topic_scores = []
-
 
         #pak alleen doc_id element, drop scores/weighted avg
         for tpl in weighted_tuple_lst:
@@ -182,31 +185,36 @@ class Bayesian_Reranker():
         return final_list_ids, final_list_scores
 
 
-    def picking_strategy(self):
-        pass
-
     def rerank(self):
         # Original document ids and scores
         doc_ids = self.baseline.get_doc_ids()
         scores = self.baseline.get_scores()
+
+        # Keep track of reranked docids and scores
         reranked_doc_ids = defaultdict(partial(np.ndarray, 0)) 
         reranked_doc_scores = defaultdict(partial(np.ndarray, 0)) 
 
-        # TODO pick different strategies
-        strategy= "TOP-K-AVG"
+        print(f"Weighing topics using {self.strategy} strategy")
 
         for id in self.query_ids:
             print(f"Reranking for topic {id}")
             docs_per_topic = self.docs_to_topic(self.X[id])
-            reranked_ids, reranked_scores = self.reranking_merge(self.weigh_topics(docs_per_topic, scores[id], doc_ids[id]))
-            #rankings naar dictionairy
+            # Apply different weighing of topics depending on chosen strategy
+            reranked_ids, reranked_scores = self.reranking_merge(self.weigh_topics(docs_per_topic, scores[id], doc_ids[id], self.strategy, self.top_k))
+
+            # Store rankings in a dictionary
             reranked_doc_ids[id] = reranked_ids
             reranked_doc_scores[id] = reranked_scores
 
         # Write rankings to file 
-        run_name = f"RERANK-{strategy}"
+        if strategy == "TOP-K-AVG":
+            run_name = f"RERANK-N{self.N}-TOP-{self.top_k}-AVG"
+        else:
+            run_name = f"RERANK-N{self.N}-{self.strategy}"
         self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name)
 
 if __name__ == "__main__":
-    reranker = Bayesian_Reranker()
-    reranker.rerank()
+    strategies = ["TOP-K-AVG"]
+    for strategy in strategies:
+        reranker = Bayesian_Reranker(strategy=strategy)
+        reranker.rerank()
