@@ -115,13 +115,13 @@ class Bayesian_Reranker():
     #helper functions
     
     #finds longest list
-    def find_max_list(list):
-        list_len = [len(i) for i in list]
+    def find_max_list(self, lst):
+        list_len = [len(i) for i in lst]
         return max(list_len)
     
     #helps to merge lists in alternating fashion
     #subtopic_lists is a list of lists and each item is a subtopic_list
-    def merger(subtopic_lists, merge_list):
+    def merger(self, subtopic_lists, merge_list):
         for x in range(len(subtopic_lists)):
             try:
                 merge_list.append(subtopic_lists[x].pop(0))
@@ -140,7 +140,7 @@ class Bayesian_Reranker():
         #loop over dictionairy, so for each subtopic
         for key in docs_per_topic_dict:
             docs_topic_sub = docs_per_topic_dict[key]
-            print(docs_topic_sub)
+            #print(docs_topic_sub)
             doc_scores_sub = []
             doc_ids_sub = []
             for x in docs_topic_sub:
@@ -150,32 +150,36 @@ class Bayesian_Reranker():
             
             #deze twee lijsten zijn nodig voor de 2 verschillende rankingen
             #om te sorteren op weighted average of first k
-            avg_scores_and_ids.append((sum(doc_scores_sub[:avg_based_on_first_k])/len(doc_scores_sub[:avg_based_on_first_k]), doc_ids_sub))
+            avg_scores_and_ids.append((sum(doc_scores_sub[:avg_based_on_first_k])/len(doc_scores_sub[:avg_based_on_first_k]), doc_ids_sub, doc_scores_sub))
             #greedy
-            highest_scores_and_ids.append(((doc_scores_sub[0]), (doc_ids_sub)))    
+            highest_scores_and_ids.append(((doc_scores_sub[0]), (doc_ids_sub), doc_scores_sub))    
 
         #hier kan je dus ook kiezen en switchen of je op gemiddelde score of hoogste 1e score wil ranken
         #sorted based on first element of tuple
         return sorted(avg_scores_and_ids,key=itemgetter(0), reverse=True)
         #return sorted(highest_scores_and_ids,key=itemgetter(0), reverse=True)
 
-    def reranking_merge(weighted_tuple_lst):
-        final_list = []
+    def reranking_merge(self, weighted_tuple_lst):
+        final_list_ids = []
+        final_list_scores = []
         ordered_topic_ids = []
+        ordered_topic_scores = []
 
 
         #pak alleen doc_id element, drop scores/weighted avg
         for tpl in weighted_tuple_lst:
             ordered_topic_ids.append(tpl[1])
+            ordered_topic_scores.append(tpl[2])
         
         #we need to do the merger as many times as the length of the longest list
-        iters_needed = find_max_list(ordered_topic_ids)
+        iters_needed = self.find_max_list(ordered_topic_ids)
 
         #merge lists in ordered_topic_ids in alternating fashion
         for i in range(iters_needed):
-            final_list = merger(ordered_topic_ids, final_list)
+            final_list_ids = self.merger(ordered_topic_ids, final_list_ids)
+            final_list_scores = self.merger(ordered_topic_scores, final_list_scores)
         
-        return final_list
+        return final_list_ids, final_list_scores
 
 
     def picking_strategy(self):
@@ -187,22 +191,25 @@ class Bayesian_Reranker():
         # Original document ids and scores
         doc_ids = self.baseline.get_doc_ids()
         scores = self.baseline.get_scores()
+        reranked_doc_ids = defaultdict(partial(np.ndarray, 0)) 
+        reranked_doc_scores = defaultdict(partial(np.ndarray, 0)) 
 
         for id in self.query_ids:
             print(f"Reranking for topic {id}")
             docs_per_topic = self.docs_to_topic(self.X[id])
-            print(docs_per_topic)
             ## TODO we need access to the original docids here; 
             #print(doc_ids[id])
             #print(scores[id])
             ## TODO the actual reranking here within the loop
-            self.weigh_topics(docs_per_topic, scores[id], doc_ids[id])
-            #next_step = weigh_topics(docs_per_topic, scores[id], doc_ids[id])
-            #output = reranking_merge(next_step)
-            #niet gewoon printen, maar naar een bestandje
-            #print(output)
+            next_step = self.weigh_topics(docs_per_topic, scores[id], doc_ids[id])
+            ids, scores = self.reranking_merge(next_step)
+            #rankings naar dictionairy
+            reranked_doc_ids[id] = ids
+            reranked_doc_scores[id] = scores
             ## picking_strategy()
 
+        print(reranked_doc_ids)
+        print(reranked_score_ids)
         # Reranking for one topic
         #print(f"Reranking for one topic")
         #print(self.query_ids[0])
