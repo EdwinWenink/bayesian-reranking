@@ -130,7 +130,7 @@ class Bayesian_Reranker():
        
         return merge_list
 
-    def weigh_topics(self, docs_per_topic_dict, scores, doc_ids):
+    def weigh_topics(self, docs_per_topic_dict, doc_scores, doc_ids):
         avg_scores_and_ids = []
         highest_scores_and_ids = []
 
@@ -140,7 +140,7 @@ class Bayesian_Reranker():
         #loop over dictionairy, so for each subtopic
         for key in docs_per_topic_dict:
             docs_topic_sub = docs_per_topic_dict[key]
-            print(docs_topic_sub_lst)
+            print(docs_topic_sub)
             doc_scores_sub = []
             doc_ids_sub = []
             for x in docs_topic_sub:
@@ -196,7 +196,7 @@ class Bayesian_Reranker():
             #print(doc_ids[id])
             #print(scores[id])
             ## TODO the actual reranking here within the loop
-            weigh_topics(docs_per_topic, scores[id], doc_ids[id])
+            self.weigh_topics(docs_per_topic, scores[id], doc_ids[id])
             #next_step = weigh_topics(docs_per_topic, scores[id], doc_ids[id])
             #output = reranking_merge(next_step)
             #niet gewoon printen, maar naar een bestandje
