@@ -23,7 +23,7 @@ class Bayesian_Reranker():
         self.utils = Utils()
 
         # Amount of documents to rank and rerank
-        self.N= 100
+        self.N= 1000
 
         # Select a strategy for weighing final topics
         self.strategy = strategy
@@ -204,7 +204,11 @@ class Bayesian_Reranker():
 
             # Store rankings in a dictionary
             reranked_doc_ids[id] = reranked_ids
-            reranked_doc_scores[id] = reranked_scores
+            #reranked_doc_scores[id] = reranked_scores
+            # It looks like trec_eval first sorts the rankings on scores, nullifying the reranking
+            # So give fake relevance scores instead
+            reranked_doc_scores[id] = list(range(self.N, 0, -1))
+
 
         # Write rankings to file 
         if strategy == "TOP-K-AVG":
@@ -214,8 +218,8 @@ class Bayesian_Reranker():
         self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name)
 
 if __name__ == "__main__":
-    #strategies = ["TOP-K-AVG"]
-    strategies = ["GREEDY"]
+    strategies = ["TOP-K-AVG"]
+    #strategies = ["GREEDY"]
     for strategy in strategies:
         reranker = Bayesian_Reranker(strategy=strategy)
         reranker.rerank()
