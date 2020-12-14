@@ -7,11 +7,10 @@ from pyserini.index import IndexReader
 from collections import defaultdict
 from operator import itemgetter
 import numpy as np
-#import gensim
 from gensim.test.utils import common_texts
 from gensim.corpora.dictionary import Dictionary
 from gensim.models import LdaModel
-
+from utils import Utils
 import itertools
 from functools import partial
 
@@ -21,6 +20,7 @@ class Bayesian_Reranker():
     def __init__(self, seed=0, max_iter=1000):
         self.seed = seed
         self.max_iter = max_iter
+        self.utils = Utils()
 
         # TODO ideally we don't want to first rank every time for the reranking 
         # Either integrate the reranking in the original ranking; or load a pre-existing ranking 
@@ -186,47 +186,26 @@ class Bayesian_Reranker():
         pass
 
     def rerank(self):
-        # Try for the first topic only
-
         # Original document ids and scores
         doc_ids = self.baseline.get_doc_ids()
         scores = self.baseline.get_scores()
         reranked_doc_ids = defaultdict(partial(np.ndarray, 0)) 
         reranked_doc_scores = defaultdict(partial(np.ndarray, 0)) 
 
+        # TODO pick different strategies
+        strategy= "TOP-K-AVG"
+
         for id in self.query_ids:
             print(f"Reranking for topic {id}")
             docs_per_topic = self.docs_to_topic(self.X[id])
-            ## TODO we need access to the original docids here; 
-            #print(doc_ids[id])
-            #print(scores[id])
-            ## TODO the actual reranking here within the loop
-            next_step = self.weigh_topics(docs_per_topic, scores[id], doc_ids[id])
-            ids, scores = self.reranking_merge(next_step)
+            reranked_ids, reranked_scores = self.reranking_merge(self.weigh_topics(docs_per_topic, scores[id], doc_ids[id]))
             #rankings naar dictionairy
-            reranked_doc_ids[id] = ids
-            reranked_doc_scores[id] = scores
-            ## picking_strategy()
+            reranked_doc_ids[id] = reranked_ids
+            reranked_doc_scores[id] = reranked_scores
 
-        print(reranked_doc_ids)
-        print(reranked_score_ids)
-        # Reranking for one topic
-        #print(f"Reranking for one topic")
-        #print(self.query_ids[0])
-        #docs_per_topic = self.docs_to_topic(self.X['393'])
-        #next_step = weigh_topics(docs_per_topic, scores[id], doc_ids[id])
-        #scores_topic = scores['393']
-        #doc_ids_topic = doc_ids['393']
-        #print(scores_topic)
-        #print(doc_ids_topic)
-        #print(docs_per_topic)
-        #for key in docs_per_topic:
-         #   print(docs_per_topic[key])
-        
-            
-              
-        
-
+        # Write rankings to file 
+        run_name = f"RERANK-{strategy}"
+        self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name)
 
 if __name__ == "__main__":
     reranker = Bayesian_Reranker()
