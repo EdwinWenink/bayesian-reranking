@@ -38,7 +38,7 @@ class BaselineBM25():
         # Produce a file suitable to be used with trec-eval
         self.doc_ids = { query_id: [ hit.docid for hit in hits] for query_id, hits in self.batch_hits.items() }
         self.scores = { query_id: [ hit.score for hit in hits] for query_id, hits in self.batch_hits.items() }
-        run_name = "BASELINE"
+        run_name = f"BASELINE-N{self.k}"
         self.utils.write_rankings(self.query_ids, self.doc_ids, self.scores, run_name)
 
     def get_topics(self):
