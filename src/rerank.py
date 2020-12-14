@@ -12,12 +12,13 @@ from gensim.corpora.dictionary import Dictionary
 from gensim.models import LdaModel
 from utils import Utils
 import itertools
+import time
 from functools import partial
 
 
 class Bayesian_Reranker():
     
-    def __init__(self, strategy="GREEDY", seed=0, max_iter=25):
+    def __init__(self, strategy="GREEDY", seed=0, max_iter=20):
         self.seed = seed
         self.max_iter = max_iter
         self.utils = Utils()
@@ -77,8 +78,8 @@ class Bayesian_Reranker():
             topics, topic_counts = np.unique(argmax, return_counts=True)
             return topics, topic_counts, argmax
 
-        # Initialisation
-        k = len(X)  # init: k=N (=1000)
+        # Initialisation (either N or 25 if N>25)
+        k = min(len(X), 25)  # init: k=N (=1000)
         prev = np.zeros(k)
         i = 1
 
@@ -86,6 +87,8 @@ class Bayesian_Reranker():
         print(f"Iteration {i}: running with k={k}")
         # Initial run with a symmetric alpha prior
         lda = LdaModel(corpus=X, num_topics = k, alpha='symmetric', random_state=self.seed)
+        # TODO: plot how the convergence procedure correlates with perplexity scores; or coherence score
+        #perplexity = lda.log_perplexity(X)
         preds = lda[X]
         argmax = [ max(topics, key=itemgetter(1))[0] for topics in preds]
         topics, topic_counts = np.unique(argmax, return_counts=True)
@@ -93,12 +96,12 @@ class Bayesian_Reranker():
         # Convergence criterion is only a heuristic w.r.t. the paper
         # Checks topic counts instead of ensuring all document per topic stay the same 
         while not np.array_equal(prev, topic_counts) and i < self.max_iter:
-            i += 1
             prev = topic_counts
             k = len(topics)  
             print(f"Iteration {i}: running with k={k}")
             # pass topic distribution of previous iteration as alpha prior
             topics, topic_counts, argmax = step(k, topic_counts/len(X))
+            i += 1
 
         if i == self.max_iter:
             print(f"Maximum iterations reached. Terminated with {len(topics)} topics ")
@@ -198,9 +201,11 @@ class Bayesian_Reranker():
 
         for id in self.query_ids:
             print(f"Reranking for topic {id}")
+            start = time.time()
             docs_per_topic = self.docs_to_topic(self.X[id])
             # Apply different weighing of topics depending on chosen strategy
             reranked_ids, reranked_scores = self.reranking_merge(self.weigh_topics(docs_per_topic, scores[id], doc_ids[id], self.strategy, self.top_k))
+            print(f"Query results reranked in {time.time() - start} seconds")
 
             # Store rankings in a dictionary
             reranked_doc_ids[id] = reranked_ids
@@ -208,7 +213,6 @@ class Bayesian_Reranker():
             # It looks like trec_eval first sorts the rankings on scores, nullifying the reranking
             # So give fake relevance scores instead
             reranked_doc_scores[id] = list(range(self.N, 0, -1))
-
 
         # Write rankings to file 
         if strategy == "TOP-K-AVG":
