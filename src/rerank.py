@@ -78,8 +78,8 @@ class Bayesian_Reranker():
             topics, topic_counts = np.unique(argmax, return_counts=True)
             return topics, topic_counts, argmax
 
-        # Initialisation (either N or 25 if N>25)
-        k = min(len(X), 25)  # init: k=N (=1000)
+        # Initialisation (either N or 20 if N>20)
+        k = min(len(X), 20)  # init: k=N (=1000)
         prev = np.zeros(k)
         i = 1
 
@@ -222,8 +222,8 @@ class Bayesian_Reranker():
         self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name)
 
 if __name__ == "__main__":
-    strategies = ["TOP-K-AVG"]
-    #strategies = ["GREEDY"]
+    #strategies = ["TOP-K-AVG"]
+    strategies = ["GREEDY"]
     for strategy in strategies:
         reranker = Bayesian_Reranker(strategy=strategy)
         reranker.rerank()

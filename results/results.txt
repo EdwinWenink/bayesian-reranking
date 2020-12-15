@@ -1,0 +1,13 @@
+# Evaluation Scores
+
+## N1000
+
+Baseline:
+
+- map: 0.2495
+- ndcg: 0.5375
+
+Rerank:
+
+- map: 0.1395
+- ndcg:	0.4696
