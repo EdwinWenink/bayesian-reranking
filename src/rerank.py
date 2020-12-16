@@ -24,7 +24,7 @@ class Bayesian_Reranker():
         self.utils = Utils()
 
         # Amount of documents to rank and rerank
-        self.N= 1000
+        self.N= 100
 
         # Select a strategy for weighing final topics
         self.strategy = strategy
@@ -155,7 +155,7 @@ class Bayesian_Reranker():
                 doc_scores_sub.append(doc_scores[x])
                 doc_ids_sub.append(doc_ids[x])
             
-            #deze twee lijsten zijn nodig voor de 2 verschillende rankingen
+            
             #om te sorteren op weighted average of first k
             if strategy == "TOP-K-AVG":
                 scores_and_ids.append((sum(doc_scores_sub[:top_k])/len(doc_scores_sub[:top_k]), doc_ids_sub, doc_scores_sub))
@@ -223,7 +223,7 @@ class Bayesian_Reranker():
 
 if __name__ == "__main__":
     #strategies = ["TOP-K-AVG"]
-    strategies = ["GREEDY"]
+    strategies = ["TOP-K-AVG"]
     for strategy in strategies:
         reranker = Bayesian_Reranker(strategy=strategy)
         reranker.rerank()
