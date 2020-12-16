@@ -222,8 +222,8 @@ class Bayesian_Reranker():
         self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name)
 
 if __name__ == "__main__":
-    #strategies = ["TOP-K-AVG"]
     strategies = ["TOP-K-AVG"]
+    #strategies = ["GREEDY"]
     for strategy in strategies:
         reranker = Bayesian_Reranker(strategy=strategy)
         reranker.rerank()
