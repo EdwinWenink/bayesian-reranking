@@ -63,5 +63,6 @@ class BaselineBM25():
         return self.scores
 
 if __name__ == "__main__":
-    bm25 = BaselineBM25(k=1000)
+    index_loc = '../../anserini/indexes/lucene-wapost.v2.pos+docvectors+contents'
+    bm25 = BaselineBM25(k=1000, index_loc=index_loc)
     bm25.rank()

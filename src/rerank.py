@@ -32,8 +32,11 @@ class Bayesian_Reranker():
         # K to use in TOP-K-AVG strategy
         self.top_k = 10 
 
+        # TODO testing contents index here
+        index_loc = '../../anserini/indexes/lucene-wapost.v2.pos+docvectors+contents'
+
         # TODO ideally we don't want to first rank every time for the reranking 
-        self.baseline = BaselineBM25(k=self.N)
+        self.baseline = BaselineBM25(k=self.N, index_loc=index_loc)
         self.baseline.rank()
 
         # For each topic, the system outputs N retrieved articles.
@@ -56,7 +59,8 @@ class Bayesian_Reranker():
         # Next line returns preprocessed documents per query 
         # TODO; this takes RAW terms, including metadata etc., which may not be ideal
         # I'd prefer to only have the contents, but `contents` property is not currently available in our index
-        docs_per_query = { query_id: [ reader.analyze( reader.doc(hit.docid).raw()) for hit in hits] for query_id, hits in self.batch_hits.items() }
+        # NOTE changed this to 'contents'
+        docs_per_query = { query_id: [ reader.analyze( reader.doc(hit.docid).contents()) for hit in hits] for query_id, hits in self.batch_hits.items() }
 
         # Prepare bag-of-words dataset for gensim
         self.X = defaultdict(list)
@@ -215,15 +219,16 @@ class Bayesian_Reranker():
             reranked_doc_scores[id] = list(range(self.N, 0, -1))
 
         # Write rankings to file 
+        # TODO temporarily changed filenames; as a test
         if strategy == "TOP-K-AVG":
-            run_name = f"RERANK-N{self.N}-TOP-{self.top_k}-AVG"
+            run_name = f"C-RERANK-N{self.N}-TOP-{self.top_k}-AVG"
         else:
-            run_name = f"RERANK-N{self.N}-{self.strategy}"
+            run_name = f"C-RERANK-N{self.N}-{self.strategy}"
         self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name)
 
 if __name__ == "__main__":
-    strategies = ["TOP-K-AVG"]
-    #strategies = ["GREEDY"]
+    #strategies = ["TOP-K-AVG"]
+    strategies = ["GREEDY"]
     for strategy in strategies:
         reranker = Bayesian_Reranker(strategy=strategy)
         reranker.rerank()
