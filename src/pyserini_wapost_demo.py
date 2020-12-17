@@ -13,7 +13,13 @@ utils = Utils()
 from pyserini.search import SimpleSearcher
 
 # Make sure you have produced this lucene index
-index_loc = '../../anserini/indexes/lucene-wapost.v2.pos+docvectors+raw'
+RAW = False
+
+if(RAW):
+    index_loc = '../../anserini/indexes/lucene-wapost.v2.pos+docvectors+raw'
+else:
+    index_loc = '../../anserini/indexes/lucene-wapost.v2.pos+docvectors+contents'
+
 searcher = SimpleSearcher(index_loc)
 
 # Configure search options and repeat the same query
@@ -43,12 +49,15 @@ id = hits[0].docid
 
 # See class Document in https://github.com/castorini/pyserini/blob/master/pyserini/search/_base.py
 # properties: docid; id (alias); lucene_document; contents; raw
-doc = reader.doc(id).raw()
-#print(doc)
+if(RAW):
+    doc = reader.doc(id).raw()
+else:
+    doc = reader.doc(id).contents()
+print(doc)
 
 # Get analyzed form (tokenized, stemmed, stopwords removed)
 analyzed = reader.analyze(doc)
-#print(analyzed)
+print(analyzed)
 
 # Raw document VECTOR is also stored
 doc_vector = reader.get_document_vector(id)
