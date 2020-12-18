@@ -222,12 +222,12 @@ class Bayesian_Reranker():
             reranked_doc_scores[id] = list(range(self.N, 0, -1))
 
         # Write ranking in suitable format for trec_eval
-        write(reranked_doc_ids, reranked_doc_scores, strategy)
+        self.write(reranked_doc_ids, reranked_doc_scores, strategy)
 
 
 if __name__ == "__main__":
-    strategies = ["TOP-K-AVG"]
-    #strategies = ["GREEDY"]
+    #strategies = ["TOP-K-AVG"]
+    strategies = ["GREEDY"]
     for strategy in strategies:
         reranker = Bayesian_Reranker(strategy=strategy)
         reranker.rerank()
