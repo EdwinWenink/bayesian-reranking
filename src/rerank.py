@@ -187,6 +187,13 @@ class Bayesian_Reranker():
         
         return final_list_ids, final_list_scores
 
+    def write(self, reranked_doc_ids, reranked_doc_scores, strategy):
+        # Write rankings to file 
+        if strategy == "TOP-K-AVG":
+            run_name = f"RERANK-N{self.N}-TOP-{self.top_k}-AVG"
+        else:
+            run_name = f"RERANK-N{self.N}-{self.strategy}"
+        self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name=)
 
     def rerank(self):
         # Original document ids and scores
@@ -214,12 +221,9 @@ class Bayesian_Reranker():
             # So give fake relevance scores instead
             reranked_doc_scores[id] = list(range(self.N, 0, -1))
 
-        # Write rankings to file 
-        if strategy == "TOP-K-AVG":
-            run_name = f"RERANK-N{self.N}-TOP-{self.top_k}-AVG"
-        else:
-            run_name = f"RERANK-N{self.N}-{self.strategy}"
-        self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name)
+        # Write ranking in suitable format for trec_eval
+        write(reranked_doc_ids, reranked_doc_scores, strategy)
+
 
 if __name__ == "__main__":
     strategies = ["TOP-K-AVG"]
