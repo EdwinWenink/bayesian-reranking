@@ -193,7 +193,7 @@ class Bayesian_Reranker():
             run_name = f"RERANK-N{self.N}-TOP-{self.top_k}-AVG"
         else:
             run_name = f"RERANK-N{self.N}-{self.strategy}"
-        self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name=)
+        self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name)
 
     def rerank(self):
         # Original document ids and scores
