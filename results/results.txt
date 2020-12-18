@@ -1,0 +1,39 @@
+# Evaluation Scores
+
+## N1000
+
+
+BASELINE:
+
+runid                 	all	BASELINE-N1000              runid                 	all	RERANK-N1000-GREEDY
+num_q                 	all	50                          num_q                 	all	50
+num_ret               	all	49564                       num_ret               	all	49564
+num_rel               	all	3948                        num_rel               	all	3948
+num_rel_ret           	all	2486                        num_rel_ret           	all	2486
+map                   	all	0.2495                      map                   	all	0.1395
+gm_map                	all	0.1645                      gm_map                	all	0.0982
+Rprec                 	all	0.2975                      Rprec                 	all	0.1711
+bpref                 	all	0.3164                      bpref                 	all	0.2550
+recip_rank            	all	0.7206                      recip_rank            	all	0.7050
+iprec_at_recall_0.00  	all	0.7578                      iprec_at_recall_0.00  	all	0.7312
+iprec_at_recall_0.10  	all	0.5200                      iprec_at_recall_0.10  	all	0.3506
+iprec_at_recall_0.20  	all	0.4273                      iprec_at_recall_0.20  	all	0.2009
+iprec_at_recall_0.30  	all	0.3485                      iprec_at_recall_0.30  	all	0.1499
+iprec_at_recall_0.40  	all	0.2922                      iprec_at_recall_0.40  	all	0.1266
+iprec_at_recall_0.50  	all	0.2225                      iprec_at_recall_0.50  	all	0.1057
+iprec_at_recall_0.60  	all	0.1711                      iprec_at_recall_0.60  	all	0.0846
+iprec_at_recall_0.70  	all	0.1265                      iprec_at_recall_0.70  	all	0.0558
+iprec_at_recall_0.80  	all	0.0818                      iprec_at_recall_0.80  	all	0.0404
+iprec_at_recall_0.90  	all	0.0555                      iprec_at_recall_0.90  	all	0.0259
+iprec_at_recall_1.00  	all	0.0134                      iprec_at_recall_1.00  	all	0.0069
+P_5                   	all	0.5400                      P_5                   	all	0.4240
+P_10                  	all	0.4580                      P_10                  	all	0.2960
+P_15                  	all	0.4253                      P_15                  	all	0.2453
+P_20                  	all	0.4000                      P_20                  	all	0.2380
+P_30                  	all	0.3567                      P_30                  	all	0.2067
+P_100                 	all	0.2150                      P_100                 	all	0.1396
+P_200                 	all	0.1433                      P_200                 	all	0.1118
+P_500                 	all	0.0797                      P_500                 	all	0.0765
+P_1000                	all	0.0497                      P_1000                	all	0.0497
+ndcg                    all 0.5375                      ndcg                    all 0.4696
+

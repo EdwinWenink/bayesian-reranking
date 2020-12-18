@@ -1,0 +1,3 @@
+python ../src/main/python/compare_runs.py --metric ndcg --base ../../bayesian-reranking/results/results-BASELINE-N1000.txt --comparison ../../bayesian-reranking/results/results-RERANK-N1000-TOP-10-AVG.txt --qrels ../../bayesian-reranking/results/qrels.core18.txt > comparison-N1000-TOP-10-AVG-ndcg.txt
+
+N.B. Compare runs assumes you are in the "tools" folder!
