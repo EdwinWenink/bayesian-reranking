@@ -1,0 +1,664 @@
+Ranking for all topics in progress ...
+Wrote results to /results/results-BASELINE-N100.txt
+Weighing topics using GREEDY strategy
+Reranking for topic 393
+Iteration 1: running with k=20
+Iteration 1: running with k=15
+Iteration 2: running with k=12
+Iteration 3: running with k=10
+Iteration 4: running with k=8
+Iteration 5: running with k=6
+Iteration 6: running with k=6
+Iteration 7: running with k=6
+Iteration 8: running with k=6
+Converged. 6 topics.
+Topic counts: [ 8  7  1 19 59  6]
+Topic assignments: [5, 4, 0, 4, 3, 4, 4, 4, 1, 3, 2, 4, 3, 4, 4, 4, 3, 1, 4, 4, 4, 1, 4, 4, 4, 3, 1, 4, 1, 4, 4, 4, 4, 3, 4, 4, 4, 3, 3, 3, 4, 4, 5, 4, 4, 1, 4, 5, 0, 4, 4, 4, 4, 3, 4, 1, 4, 4, 0, 3, 0, 0, 4, 4, 3, 4, 4, 5, 3, 4, 3, 4, 4, 4, 4, 4, 4, 5, 4, 3, 4, 4, 4, 3, 3, 4, 4, 4, 4, 4, 0, 4, 3, 3, 0, 4, 5, 0, 4, 4]
+Query results reranked in 13.338886499404907 seconds
+Reranking for topic 350
+Iteration 1: running with k=20
+Iteration 1: running with k=14
+Iteration 2: running with k=13
+Iteration 3: running with k=12
+Iteration 4: running with k=11
+Iteration 5: running with k=10
+Iteration 6: running with k=10
+Iteration 7: running with k=8
+Iteration 8: running with k=7
+Iteration 9: running with k=7
+Iteration 10: running with k=7
+Converged. 7 topics.
+Topic counts: [ 2  3 47  3 28  1 16]
+Topic assignments: [6, 2, 2, 6, 2, 2, 2, 2, 2, 4, 2, 2, 2, 4, 6, 2, 0, 4, 4, 2, 2, 1, 6, 2, 2, 6, 2, 2, 2, 3, 2, 2, 2, 2, 2, 5, 2, 2, 2, 6, 6, 4, 0, 2, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 1, 2, 2, 2, 2, 4, 2, 2, 2, 2, 3, 3, 2, 2, 2, 6, 2, 6, 2, 2, 6, 2, 2, 2, 4, 2, 2, 6, 6, 6, 6, 6, 6]
+Query results reranked in 20.325604677200317 seconds
+Reranking for topic 397
+Iteration 1: running with k=20
+Iteration 1: running with k=14
+Iteration 2: running with k=10
+Iteration 3: running with k=9
+Iteration 4: running with k=8
+Iteration 5: running with k=8
+Iteration 6: running with k=7
+Iteration 7: running with k=7
+Iteration 8: running with k=7
+Iteration 9: running with k=6
+Iteration 10: running with k=6
+Iteration 11: running with k=6
+Iteration 12: running with k=6
+Iteration 13: running with k=6
+Iteration 14: running with k=6
+Iteration 15: running with k=6
+Converged. 6 topics.
+Topic counts: [ 2 12 12 18 46 10]
+Topic assignments: [4, 4, 4, 3, 2, 4, 4, 3, 4, 4, 5, 2, 4, 1, 4, 3, 4, 4, 1, 4, 4, 3, 4, 5, 2, 2, 4, 4, 4, 4, 2, 2, 5, 2, 4, 4, 4, 3, 3, 5, 4, 4, 0, 2, 3, 3, 1, 1, 1, 4, 4, 4, 4, 4, 2, 0, 4, 4, 1, 4, 4, 3, 4, 2, 3, 4, 4, 3, 3, 1, 3, 1, 5, 4, 4, 2, 4, 1, 1, 3, 2, 5, 4, 5, 5, 4, 3, 1, 4, 4, 1, 5, 4, 4, 4, 3, 5, 4, 3, 3]
+Query results reranked in 17.778095960617065 seconds
+Reranking for topic 433
+Iteration 1: running with k=20
+Iteration 1: running with k=11
+Iteration 2: running with k=10
+Iteration 3: running with k=8
+Iteration 4: running with k=8
+Iteration 5: running with k=7
+Iteration 6: running with k=7
+Iteration 7: running with k=7
+Converged. 7 topics.
+Topic counts: [ 2  3  4  3 25 39 24]
+Topic assignments: [5, 6, 4, 6, 4, 5, 5, 2, 4, 5, 5, 6, 2, 5, 0, 5, 5, 4, 6, 5, 4, 6, 5, 4, 5, 0, 5, 6, 6, 6, 6, 5, 1, 5, 4, 3, 5, 1, 5, 4, 5, 5, 5, 4, 5, 4, 3, 6, 5, 4, 4, 2, 5, 5, 6, 5, 6, 6, 6, 5, 5, 4, 5, 5, 4, 4, 4, 4, 5, 5, 4, 5, 4, 6, 4, 4, 6, 5, 5, 5, 6, 5, 2, 6, 6, 6, 6, 6, 4, 4, 1, 3, 5, 5, 6, 4, 5, 6, 4, 5]
+Query results reranked in 15.332932949066162 seconds
+Reranking for topic 439
+Iteration 1: running with k=20
+Iteration 1: running with k=15
+Iteration 2: running with k=11
+Iteration 3: running with k=9
+Iteration 4: running with k=9
+Iteration 5: running with k=9
+Converged. 9 topics.
+Topic counts: [ 2 23 17 29  6  1  2  1 19]
+Topic assignments: [2, 3, 2, 3, 3, 3, 3, 3, 4, 2, 1, 1, 3, 8, 8, 8, 3, 3, 1, 6, 3, 1, 1, 2, 8, 2, 3, 3, 1, 1, 1, 3, 3, 8, 8, 3, 1, 8, 8, 1, 1, 1, 1, 2, 8, 3, 1, 8, 2, 2, 0, 8, 1, 2, 2, 1, 8, 3, 1, 6, 2, 3, 3, 3, 3, 3, 1, 1, 8, 1, 8, 2, 0, 8, 8, 2, 5, 4, 2, 2, 4, 4, 1, 8, 3, 3, 4, 2, 3, 8, 7, 3, 1, 1, 3, 4, 2, 3, 8, 3]
+Query results reranked in 12.177100896835327 seconds
+Reranking for topic 362
+Iteration 1: running with k=20
+Iteration 1: running with k=13
+Iteration 2: running with k=8
+Iteration 3: running with k=6
+Iteration 4: running with k=5
+Iteration 5: running with k=5
+Iteration 6: running with k=5
+Converged. 5 topics.
+Topic counts: [15 10  1  1 73]
+Topic assignments: [0, 4, 4, 1, 4, 4, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 0, 4, 0, 4, 4, 4, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 4, 4, 4, 4, 1, 0, 4, 4, 4, 2, 1, 4, 4, 4, 0, 4, 4, 1, 4, 4, 4, 4, 1, 0, 0, 4, 4, 4, 1, 4, 4, 4, 4, 4, 4, 0, 0, 4, 4, 4, 0, 3, 4, 4, 1, 4, 4, 4, 0, 0, 4, 4, 4, 4, 4, 1, 4, 4, 4, 4, 4, 0, 4, 0]
+Query results reranked in 10.277315378189087 seconds
+Reranking for topic 363
+Iteration 1: running with k=20
+Iteration 1: running with k=14
+Iteration 2: running with k=9
+Iteration 3: running with k=8
+Iteration 4: running with k=8
+Iteration 5: running with k=8
+Iteration 6: running with k=8
+Iteration 7: running with k=8
+Converged. 8 topics.
+Topic counts: [ 2 17  1  2  1 52  1 24]
+Topic assignments: [5, 1, 1, 5, 5, 1, 5, 5, 5, 7, 1, 1, 5, 5, 1, 1, 1, 5, 1, 1, 1, 7, 3, 7, 5, 7, 7, 7, 1, 5, 3, 5, 5, 5, 7, 1, 5, 5, 7, 5, 5, 5, 7, 5, 5, 5, 5, 5, 7, 5, 7, 5, 7, 7, 5, 5, 5, 5, 5, 5, 5, 7, 5, 5, 1, 7, 5, 5, 5, 5, 7, 5, 7, 5, 0, 6, 7, 5, 2, 7, 7, 1, 5, 5, 0, 5, 5, 5, 1, 7, 5, 4, 1, 5, 5, 5, 7, 7, 5, 7]
+Query results reranked in 12.484567403793335 seconds
+Reranking for topic 321
+Iteration 1: running with k=20
+Iteration 1: running with k=13
+Iteration 2: running with k=10
+Iteration 3: running with k=10
+Converged. 10 topics.
+Topic counts: [ 3  2 10  8 21 34  1 15  5  1]
+Topic assignments: [4, 4, 3, 4, 3, 3, 2, 7, 5, 4, 0, 5, 8, 5, 5, 3, 5, 5, 5, 7, 7, 5, 7, 4, 2, 7, 5, 5, 4, 5, 5, 7, 7, 5, 5, 5, 7, 5, 7, 3, 5, 8, 8, 8, 8, 5, 5, 5, 5, 4, 5, 4, 7, 9, 0, 4, 5, 4, 4, 1, 2, 5, 3, 3, 3, 5, 4, 2, 2, 2, 2, 2, 5, 7, 7, 5, 5, 4, 0, 4, 5, 4, 7, 7, 1, 2, 2, 6, 5, 5, 4, 5, 5, 7, 4, 4, 4, 5, 4, 4]
+Query results reranked in 7.470669746398926 seconds
+Reranking for topic 442
+Iteration 1: running with k=20
+Iteration 1: running with k=12
+Iteration 2: running with k=11
+Iteration 3: running with k=8
+Iteration 4: running with k=6
+Iteration 5: running with k=5
+Iteration 6: running with k=5
+Iteration 7: running with k=5
+Converged. 5 topics.
+Topic counts: [ 2 26 31  2 39]
+Topic assignments: [4, 4, 2, 2, 4, 2, 4, 4, 1, 2, 0, 2, 1, 2, 4, 1, 4, 2, 2, 2, 1, 1, 2, 2, 4, 4, 2, 4, 4, 1, 1, 4, 1, 1, 4, 4, 4, 1, 1, 2, 2, 2, 4, 1, 4, 4, 1, 1, 4, 4, 4, 4, 2, 4, 2, 3, 2, 1, 4, 1, 4, 2, 1, 3, 4, 2, 4, 1, 4, 1, 4, 1, 4, 2, 4, 1, 1, 2, 0, 2, 2, 4, 2, 4, 1, 2, 2, 4, 4, 1, 4, 2, 4, 2, 2, 2, 4, 1, 4, 1]
+Query results reranked in 10.45946979522705 seconds
+Reranking for topic 367
+Iteration 1: running with k=20
+Iteration 1: running with k=13
+Iteration 2: running with k=12
+Iteration 3: running with k=9
+Iteration 4: running with k=8
+Iteration 5: running with k=7
+Iteration 6: running with k=6
+Iteration 7: running with k=6
+Iteration 8: running with k=5
+Iteration 9: running with k=5
+Iteration 10: running with k=5
+Converged. 5 topics.
+Topic counts: [11 47 14 24  4]
+Topic assignments: [3, 3, 0, 3, 3, 3, 4, 2, 3, 0, 1, 1, 1, 3, 1, 1, 0, 1, 4, 1, 1, 2, 0, 1, 3, 1, 3, 0, 1, 2, 1, 3, 1, 1, 1, 1, 1, 2, 4, 3, 1, 3, 3, 1, 1, 2, 1, 1, 0, 4, 1, 2, 0, 1, 1, 1, 1, 1, 2, 3, 1, 3, 1, 1, 2, 3, 1, 1, 3, 1, 1, 2, 3, 3, 1, 1, 1, 3, 3, 1, 0, 2, 1, 3, 1, 1, 0, 2, 1, 3, 2, 3, 2, 0, 2, 1, 1, 0, 1, 1]
+Query results reranked in 11.190345525741577 seconds
+Reranking for topic 400
+Iteration 1: running with k=20
+Iteration 1: running with k=15
+Iteration 2: running with k=13
+Iteration 3: running with k=11
+Iteration 4: running with k=10
+Iteration 5: running with k=9
+Iteration 6: running with k=8
+Iteration 7: running with k=8
+Iteration 8: running with k=7
+Iteration 9: running with k=6
+Iteration 10: running with k=6
+Converged. 6 topics.
+Topic counts: [10 44 17 19  2  8]
+Topic assignments: [1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 3, 1, 2, 2, 1, 1, 3, 1, 1, 1, 5, 2, 5, 1, 0, 3, 3, 3, 1, 5, 0, 3, 1, 4, 1, 1, 1, 1, 2, 1, 1, 5, 1, 3, 3, 1, 1, 2, 1, 0, 1, 1, 5, 1, 3, 1, 1, 2, 1, 1, 1, 0, 2, 0, 3, 3, 3, 2, 2, 3, 3, 0, 1, 2, 3, 1, 0, 0, 0, 3, 1, 5, 1, 1, 2, 2, 2, 3, 2, 1, 0, 2, 2, 4, 1, 5, 2, 5, 3]
+Query results reranked in 16.65551257133484 seconds
+Reranking for topic 445
+Iteration 1: running with k=20
+Iteration 1: running with k=12
+Iteration 2: running with k=8
+Iteration 3: running with k=8
+Iteration 4: running with k=8
+Iteration 5: running with k=8
+Converged. 8 topics.
+Topic counts: [ 2 31  4  2 23  2 30  6]
+Topic assignments: [7, 6, 6, 6, 6, 6, 2, 6, 1, 6, 1, 1, 1, 1, 1, 1, 7, 1, 1, 1, 4, 1, 4, 4, 4, 4, 1, 1, 1, 7, 7, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 2, 1, 4, 7, 1, 6, 1, 1, 1, 6, 1, 2, 1, 3, 1, 1, 6, 6, 1, 1, 6, 6, 6, 4, 4, 1, 2, 4, 3, 6, 6, 6, 7, 6, 6, 0, 1, 0, 4, 4, 4, 1, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6, 4, 1, 5, 4]
+Query results reranked in 10.01745319366455 seconds
+Reranking for topic 646
+Iteration 1: running with k=20
+Iteration 1: running with k=8
+Iteration 2: running with k=6
+Iteration 3: running with k=5
+Iteration 4: running with k=5
+Iteration 5: running with k=5
+Converged. 5 topics.
+Topic counts: [ 3 43 30  3 21]
+Topic assignments: [2, 1, 1, 1, 2, 1, 1, 1, 2, 2, 2, 2, 1, 4, 4, 1, 2, 4, 2, 4, 1, 2, 2, 1, 4, 0, 1, 1, 4, 1, 1, 1, 1, 1, 2, 4, 1, 4, 4, 4, 1, 1, 1, 2, 4, 2, 2, 4, 2, 1, 1, 2, 2, 4, 1, 1, 1, 1, 4, 0, 2, 4, 4, 1, 2, 2, 4, 2, 0, 1, 1, 2, 2, 4, 1, 1, 1, 2, 2, 3, 3, 3, 1, 4, 1, 2, 2, 2, 1, 2, 2, 1, 1, 1, 1, 1, 4, 4, 1, 1]
+Query results reranked in 8.338874101638794 seconds
+Reranking for topic 801
+Iteration 1: running with k=20
+Iteration 1: running with k=10
+Iteration 2: running with k=6
+Iteration 3: running with k=5
+Iteration 4: running with k=4
+Iteration 5: running with k=4
+Iteration 6: running with k=4
+Converged. 4 topics.
+Topic counts: [ 1 93  1  5]
+Topic assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 2, 1, 3, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1]
+Query results reranked in 8.493751764297485 seconds
+Reranking for topic 802
+Iteration 1: running with k=20
+Iteration 1: running with k=9
+Iteration 2: running with k=6
+Iteration 3: running with k=5
+Iteration 4: running with k=4
+Iteration 5: running with k=4
+Iteration 6: running with k=4
+Iteration 7: running with k=4
+Converged. 4 topics.
+Topic counts: [ 1 15 35 49]
+Topic assignments: [3, 0, 3, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 1, 1, 1, 3, 3, 3]
+Query results reranked in 10.675045490264893 seconds
+Reranking for topic 803
+Iteration 1: running with k=20
+Iteration 1: running with k=12
+Iteration 2: running with k=11
+Iteration 3: running with k=10
+Iteration 4: running with k=9
+Iteration 5: running with k=8
+Iteration 6: running with k=7
+Iteration 7: running with k=7
+Converged. 7 topics.
+Topic counts: [24  7  9 31 13 15  1]
+Topic assignments: [3, 3, 4, 0, 0, 0, 5, 4, 3, 0, 4, 0, 5, 4, 2, 0, 3, 4, 0, 2, 3, 3, 5, 5, 0, 3, 2, 4, 5, 1, 3, 5, 1, 4, 5, 4, 3, 3, 3, 0, 2, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 2, 0, 5, 4, 5, 6, 3, 0, 3, 3, 1, 5, 5, 0, 3, 3, 2, 0, 1, 1, 2, 0, 3, 4, 1, 5, 5, 5, 3, 3, 3, 1, 0, 5, 0, 3, 4, 2, 4, 3, 3, 3, 3, 0, 4, 2, 0]
+Query results reranked in 12.11452865600586 seconds
+Reranking for topic 408
+Iteration 1: running with k=20
+Iteration 1: running with k=9
+Iteration 2: running with k=7
+Iteration 3: running with k=6
+Iteration 4: running with k=6
+Iteration 5: running with k=6
+Converged. 6 topics.
+Topic counts: [ 2 40  2  1 50  5]
+Topic assignments: [4, 1, 4, 4, 4, 4, 1, 4, 4, 4, 1, 1, 1, 5, 4, 4, 1, 4, 4, 0, 4, 4, 4, 4, 4, 4, 1, 1, 4, 5, 1, 4, 4, 4, 4, 4, 1, 1, 1, 1, 4, 4, 4, 4, 4, 1, 1, 4, 4, 5, 4, 1, 1, 2, 1, 1, 1, 4, 4, 1, 4, 1, 4, 4, 1, 1, 0, 1, 4, 5, 1, 4, 4, 2, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 4, 3, 4, 1, 4, 4, 5, 1, 4, 4, 1, 4, 4]
+Query results reranked in 7.327672958374023 seconds
+Reranking for topic 804
+Iteration 1: running with k=20
+Iteration 1: running with k=14
+Iteration 2: running with k=10
+Iteration 3: running with k=7
+Iteration 4: running with k=7
+Iteration 5: running with k=6
+Iteration 6: running with k=6
+Iteration 7: running with k=6
+Converged. 6 topics.
+Topic counts: [ 1 22 21 12 24 20]
+Topic assignments: [2, 5, 3, 5, 5, 2, 4, 4, 3, 4, 5, 5, 5, 4, 4, 5, 2, 2, 4, 4, 5, 1, 1, 1, 1, 1, 1, 2, 4, 5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 1, 2, 1, 5, 4, 2, 1, 1, 1, 2, 2, 5, 2, 2, 3, 1, 1, 4, 4, 4, 5, 2, 4, 2, 4, 2, 2, 4, 5, 5, 3, 4, 4, 4, 2, 4, 2, 3, 2, 4, 3, 5, 3, 3, 3, 3, 2, 0, 2, 3, 4, 5, 3, 5, 4, 4, 5, 5]
+Query results reranked in 11.429093599319458 seconds
+Reranking for topic 805
+Iteration 1: running with k=20
+Iteration 1: running with k=11
+Iteration 2: running with k=7
+Iteration 3: running with k=7
+Iteration 4: running with k=7
+Iteration 5: running with k=7
+Converged. 7 topics.
+Topic counts: [18  9  3 18  5 37 10]
+Topic assignments: [5, 3, 3, 0, 5, 5, 0, 3, 3, 5, 4, 4, 4, 4, 4, 0, 5, 6, 1, 5, 5, 0, 6, 1, 2, 0, 5, 0, 6, 5, 5, 3, 0, 5, 5, 5, 5, 2, 5, 0, 1, 6, 1, 5, 5, 1, 3, 6, 3, 3, 1, 3, 5, 3, 5, 6, 0, 0, 5, 0, 5, 5, 6, 0, 0, 5, 5, 5, 6, 5, 1, 5, 3, 3, 1, 5, 0, 5, 5, 6, 3, 0, 5, 5, 3, 0, 5, 0, 5, 3, 3, 6, 0, 5, 1, 2, 5, 5, 3, 3]
+Query results reranked in 7.657726287841797 seconds
+Reranking for topic 806
+Iteration 1: running with k=20
+Iteration 1: running with k=10
+Iteration 2: running with k=7
+Iteration 3: running with k=5
+Iteration 4: running with k=4
+Iteration 5: running with k=3
+Iteration 6: running with k=2
+Iteration 7: running with k=2
+Iteration 8: running with k=2
+Converged. 2 topics.
+Topic counts: [14 86]
+Topic assignments: [1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Query results reranked in 10.9183509349823 seconds
+Reranking for topic 807
+Iteration 1: running with k=20
+Iteration 1: running with k=11
+Iteration 2: running with k=9
+Iteration 3: running with k=9
+Iteration 4: running with k=9
+Iteration 5: running with k=9
+Converged. 9 topics.
+Topic counts: [22  4 12  3 41  3  3 11  1]
+Topic assignments: [4, 4, 0, 4, 2, 2, 4, 4, 4, 4, 4, 4, 0, 4, 0, 2, 0, 0, 0, 5, 4, 0, 4, 0, 4, 4, 4, 4, 0, 0, 4, 4, 6, 2, 0, 7, 4, 0, 0, 4, 7, 0, 1, 4, 1, 2, 0, 5, 4, 3, 0, 0, 2, 0, 4, 4, 4, 7, 0, 6, 4, 4, 4, 4, 0, 7, 4, 4, 2, 7, 7, 2, 4, 2, 5, 2, 2, 4, 7, 4, 8, 0, 1, 4, 3, 4, 2, 0, 1, 7, 4, 4, 7, 7, 7, 4, 4, 3, 6, 4]
+Query results reranked in 12.958861112594604 seconds
+Reranking for topic 808
+Iteration 1: running with k=20
+Iteration 1: running with k=10
+Iteration 2: running with k=9
+Iteration 3: running with k=8
+Iteration 4: running with k=6
+Iteration 5: running with k=6
+Iteration 6: running with k=6
+Converged. 6 topics.
+Topic counts: [ 7  7 35 42  2  7]
+Topic assignments: [3, 3, 3, 3, 0, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 2, 5, 5, 1, 1, 2, 5, 2, 3, 2, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 2, 4, 5, 5, 2, 2, 3, 2, 2, 0, 3, 2, 2, 3, 4, 2, 2, 5, 0, 3, 2, 2, 2, 2, 2, 2, 3, 3, 3, 2, 0, 2, 2, 2, 2, 0, 0, 3, 3, 2, 2, 3, 2, 2, 2, 2, 2, 1, 1, 2, 1, 3, 2, 5, 0, 3]
+Query results reranked in 15.900848150253296 seconds
+Reranking for topic 809
+Iteration 1: running with k=20
+Iteration 1: running with k=11
+Iteration 2: running with k=8
+Iteration 3: running with k=6
+Iteration 4: running with k=6
+Iteration 5: running with k=6
+Iteration 6: running with k=6
+Iteration 7: running with k=6
+Converged. 6 topics.
+Topic counts: [11 58  2 21  4  4]
+Topic assignments: [1, 0, 1, 1, 0, 1, 0, 1, 1, 3, 3, 1, 3, 1, 5, 1, 5, 3, 5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 2, 1, 3, 1, 0, 0, 1, 3, 3, 3, 0, 1, 1, 3, 1, 1, 3, 1, 1, 1, 1, 1, 1, 0, 1, 1, 3, 1, 3, 1, 3, 3, 3, 1, 1, 1, 1, 1, 3, 1, 1, 3, 3, 0, 1, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 4, 3, 4, 0, 0, 1, 3, 1, 1, 3, 0, 1, 1, 1]
+Query results reranked in 12.649130821228027 seconds
+Reranking for topic 690
+Iteration 1: running with k=20
+Iteration 1: running with k=12
+Iteration 2: running with k=10
+Iteration 3: running with k=9
+Iteration 4: running with k=9
+Iteration 5: running with k=9
+Iteration 6: running with k=9
+Iteration 7: running with k=9
+Converged. 9 topics.
+Topic counts: [ 1  8  1 22  1 15 14  6 32]
+Topic assignments: [6, 5, 6, 1, 1, 8, 7, 7, 6, 2, 5, 5, 7, 8, 0, 5, 3, 3, 3, 5, 5, 8, 5, 3, 3, 6, 5, 6, 3, 8, 6, 1, 6, 5, 6, 6, 3, 1, 3, 8, 5, 1, 1, 6, 3, 7, 5, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 8, 3, 3, 3, 8, 8, 3, 6, 5, 3, 3, 7, 3, 3, 3, 3, 4, 8, 3, 5, 3, 1, 3, 8, 1, 6, 5, 5, 6, 6]
+Query results reranked in 12.129660844802856 seconds
+Reranking for topic 375
+Iteration 1: running with k=20
+Iteration 1: running with k=10
+Iteration 2: running with k=7
+Iteration 3: running with k=6
+Iteration 4: running with k=5
+Iteration 5: running with k=5
+Iteration 6: running with k=4
+Iteration 7: running with k=4
+Iteration 8: running with k=4
+Converged. 4 topics.
+Topic counts: [27 20 50  3]
+Topic assignments: [0, 1, 2, 2, 0, 0, 1, 0, 1, 0, 2, 2, 2, 0, 0, 0, 0, 0, 2, 2, 0, 2, 2, 1, 1, 2, 0, 2, 1, 0, 1, 0, 0, 2, 1, 2, 2, 2, 1, 2, 0, 0, 0, 1, 3, 1, 1, 3, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 0, 2, 0, 2, 1, 2, 1, 2, 2, 2, 2, 0, 0, 2, 0, 1, 1, 2, 0, 2, 2, 2, 2, 0, 2, 2, 2, 2, 1, 2, 3, 0, 2, 0, 2, 2, 2, 2, 1, 2]
+Query results reranked in 10.849471807479858 seconds
+Reranking for topic 378
+Iteration 1: running with k=20
+Iteration 1: running with k=11
+Iteration 2: running with k=11
+Iteration 3: running with k=11
+Iteration 4: running with k=11
+Converged. 11 topics.
+Topic counts: [ 1 17  4 17 15  2  1 26  8  3  6]
+Topic assignments: [7, 4, 7, 3, 7, 2, 7, 1, 1, 8, 3, 7, 10, 8, 4, 7, 7, 7, 10, 4, 8, 7, 1, 1, 0, 4, 7, 10, 7, 7, 1, 4, 3, 4, 9, 3, 7, 3, 1, 7, 7, 1, 3, 9, 4, 3, 3, 10, 7, 1, 6, 3, 3, 1, 3, 8, 1, 9, 4, 7, 3, 7, 2, 2, 4, 7, 1, 1, 7, 7, 7, 1, 3, 3, 3, 7, 8, 10, 5, 1, 4, 8, 10, 1, 4, 7, 5, 1, 4, 4, 7, 4, 7, 3, 4, 1, 8, 3, 8, 2]
+Query results reranked in 11.578115463256836 seconds
+Reranking for topic 336
+Iteration 1: running with k=20
+Iteration 1: running with k=12
+Iteration 2: running with k=9
+Iteration 3: running with k=7
+Iteration 4: running with k=5
+Iteration 5: running with k=4
+Iteration 6: running with k=4
+Iteration 7: running with k=3
+Iteration 8: running with k=2
+Iteration 9: running with k=2
+Converged. 2 topics.
+Topic counts: [54 46]
+Topic assignments: [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0]
+Query results reranked in 12.545700073242188 seconds
+Reranking for topic 414
+Iteration 1: running with k=20
+Iteration 1: running with k=11
+Iteration 2: running with k=10
+Iteration 3: running with k=9
+Iteration 4: running with k=8
+Iteration 5: running with k=7
+Iteration 6: running with k=7
+Iteration 7: running with k=7
+Converged. 7 topics.
+Topic counts: [ 1  6 16  2  3 59 13]
+Topic assignments: [5, 5, 5, 5, 5, 5, 4, 1, 5, 5, 5, 5, 5, 5, 1, 5, 5, 5, 5, 6, 4, 5, 5, 0, 5, 5, 5, 5, 5, 6, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 5, 5, 1, 5, 5, 6, 5, 5, 3, 5, 5, 2, 5, 6, 5, 5, 4, 5, 5, 5, 3, 5, 6, 5, 6, 5, 5, 5, 5, 5, 5, 6, 5, 6, 5, 1, 6, 6, 5, 6, 6, 5, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 5, 2, 1, 2, 2, 2]
+Query results reranked in 17.93145728111267 seconds
+Reranking for topic 810
+Iteration 1: running with k=20
+Iteration 1: running with k=13
+Iteration 2: running with k=11
+Iteration 3: running with k=8
+Iteration 4: running with k=7
+Iteration 5: running with k=6
+Iteration 6: running with k=5
+Iteration 7: running with k=5
+Converged. 5 topics.
+Topic counts: [18 29 27  6 20]
+Topic assignments: [2, 4, 2, 4, 1, 1, 2, 2, 0, 2, 1, 3, 2, 1, 1, 1, 1, 1, 2, 0, 1, 0, 1, 2, 0, 2, 1, 2, 2, 0, 4, 0, 0, 2, 3, 3, 1, 0, 1, 1, 4, 4, 1, 4, 4, 0, 0, 4, 1, 3, 3, 0, 1, 1, 1, 0, 2, 0, 2, 1, 0, 1, 1, 1, 4, 2, 4, 2, 2, 2, 0, 0, 4, 2, 4, 1, 4, 0, 2, 1, 2, 2, 2, 4, 2, 4, 4, 4, 1, 2, 1, 4, 0, 2, 2, 1, 1, 3, 4, 4]
+Query results reranked in 11.120038270950317 seconds
+Reranking for topic 811
+Iteration 1: running with k=20
+Iteration 1: running with k=15
+Iteration 2: running with k=12
+Iteration 3: running with k=10
+Iteration 4: running with k=10
+Iteration 5: running with k=9
+Iteration 6: running with k=9
+Iteration 7: running with k=9
+Iteration 8: running with k=9
+Iteration 9: running with k=9
+Converged. 9 topics.
+Topic counts: [ 3 38  1 25 10 15  2  5  1]
+Topic assignments: [3, 3, 3, 3, 3, 3, 8, 1, 1, 1, 1, 3, 1, 1, 3, 1, 3, 3, 1, 1, 3, 3, 4, 1, 3, 3, 5, 1, 1, 3, 3, 3, 3, 1, 6, 1, 3, 1, 4, 4, 5, 5, 7, 5, 1, 7, 5, 5, 4, 0, 0, 5, 0, 7, 4, 1, 1, 1, 1, 5, 4, 1, 1, 1, 6, 1, 5, 1, 1, 5, 1, 1, 1, 5, 4, 1, 3, 5, 5, 5, 4, 4, 3, 4, 7, 3, 1, 1, 5, 2, 3, 3, 1, 1, 3, 7, 1, 1, 1, 1]
+Query results reranked in 15.536629438400269 seconds
+Reranking for topic 812
+Iteration 1: running with k=20
+Iteration 1: running with k=14
+Iteration 2: running with k=10
+Iteration 3: running with k=9
+Iteration 4: running with k=7
+Iteration 5: running with k=7
+Converged. 7 topics.
+Topic counts: [10 54 10  4  5  2 15]
+Topic assignments: [1, 1, 2, 1, 1, 1, 1, 1, 0, 1, 0, 1, 2, 0, 1, 6, 0, 0, 0, 4, 2, 5, 1, 4, 1, 1, 0, 2, 2, 1, 5, 1, 1, 6, 6, 6, 6, 6, 6, 1, 1, 1, 0, 6, 1, 1, 2, 2, 2, 6, 6, 6, 6, 6, 1, 6, 6, 4, 1, 0, 1, 3, 1, 1, 1, 1, 1, 1, 2, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 3, 3, 3, 1, 1, 1, 2]
+Query results reranked in 9.349046468734741 seconds
+Reranking for topic 813
+Iteration 1: running with k=20
+Iteration 1: running with k=13
+Iteration 2: running with k=12
+Iteration 3: running with k=10
+Iteration 4: running with k=8
+Iteration 5: running with k=7
+Iteration 6: running with k=6
+Iteration 7: running with k=6
+Iteration 8: running with k=6
+Converged. 6 topics.
+Topic counts: [ 7 56  5 22  8  2]
+Topic assignments: [4, 1, 1, 1, 3, 1, 3, 3, 1, 1, 1, 3, 3, 1, 3, 1, 1, 1, 3, 1, 1, 3, 4, 4, 3, 1, 1, 2, 3, 3, 3, 1, 5, 1, 3, 1, 1, 1, 1, 2, 1, 1, 3, 3, 2, 1, 3, 1, 3, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 2, 4, 1, 1, 3, 1, 1, 1, 5, 3, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 4, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 3, 3, 1, 1, 1, 1, 4, 4, 4]
+Query results reranked in 12.612330198287964 seconds
+Reranking for topic 814
+Iteration 1: running with k=20
+Iteration 1: running with k=16
+Iteration 2: running with k=14
+Iteration 3: running with k=12
+Iteration 4: running with k=11
+Iteration 5: running with k=10
+Iteration 6: running with k=10
+Iteration 7: running with k=9
+Iteration 8: running with k=8
+Iteration 9: running with k=7
+Iteration 10: running with k=7
+Iteration 11: running with k=7
+Converged. 7 topics.
+Topic counts: [ 6  8  4  2  2  2 76]
+Topic assignments: [6, 6, 6, 6, 6, 1, 6, 6, 6, 1, 3, 6, 6, 6, 1, 6, 6, 6, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 0, 6, 1, 6, 6, 6, 1, 6, 6, 6, 6, 2, 6, 6, 2, 4, 0, 6, 6, 3, 6, 6, 0, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1, 0, 6, 0, 6, 6, 0, 1, 2, 6, 6, 2, 6, 6, 5, 6, 4, 6, 6, 6, 6, 6, 1, 6]
+Query results reranked in 19.22101092338562 seconds
+Reranking for topic 815
+Iteration 1: running with k=20
+Iteration 1: running with k=7
+Iteration 2: running with k=3
+Iteration 3: running with k=3
+Iteration 4: running with k=3
+Iteration 5: running with k=3
+Converged. 3 topics.
+Topic counts: [ 2 33 65]
+Topic assignments: [2, 2, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, 1, 0, 2, 2, 2, 1, 1, 2, 2, 1, 1, 2, 2, 1, 2, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, 0, 2, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 1, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2, 2, 2]
+Query results reranked in 6.7110772132873535 seconds
+Reranking for topic 816
+Iteration 1: running with k=20
+Iteration 1: running with k=11
+Iteration 2: running with k=9
+Iteration 3: running with k=7
+Iteration 4: running with k=5
+Iteration 5: running with k=3
+Iteration 6: running with k=3
+Iteration 7: running with k=3
+Iteration 8: running with k=3
+Converged. 3 topics.
+Topic counts: [ 5 22 73]
+Topic assignments: [2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 1, 1, 2, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 0, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 0, 1, 2, 1, 1, 2, 1, 2, 2, 2, 0, 2, 2, 2, 2, 1, 2, 1, 2, 2, 1, 2, 2]
+Query results reranked in 10.056390285491943 seconds
+Reranking for topic 817
+Iteration 1: running with k=20
+Iteration 1: running with k=13
+Iteration 2: running with k=10
+Iteration 3: running with k=8
+Iteration 4: running with k=7
+Iteration 5: running with k=7
+Iteration 6: running with k=7
+Converged. 7 topics.
+Topic counts: [ 1 12  5  2 34 36 10]
+Topic assignments: [2, 2, 5, 5, 4, 1, 5, 5, 5, 5, 5, 4, 4, 2, 1, 6, 5, 5, 5, 4, 5, 3, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 4, 5, 5, 4, 4, 4, 4, 5, 5, 5, 5, 5, 4, 0, 4, 5, 6, 1, 6, 4, 3, 1, 4, 4, 6, 4, 4, 4, 6, 5, 1, 2, 5, 4, 1, 4, 1, 4, 5, 6, 4, 4, 6, 4, 6, 4, 5, 4, 2, 4, 4, 1, 1, 4, 6, 4, 4, 5, 6, 4, 1, 1, 4, 4, 1]
+Query results reranked in 10.989773750305176 seconds
+Reranking for topic 818
+Iteration 1: running with k=20
+Iteration 1: running with k=13
+Iteration 2: running with k=9
+Iteration 3: running with k=4
+Iteration 4: running with k=3
+Iteration 5: running with k=3
+Converged. 3 topics.
+Topic counts: [ 8 70 22]
+Topic assignments: [1, 0, 1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 0, 2, 2, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 0, 2, 1, 1, 1, 1, 1, 2, 0, 1, 1, 2, 1, 0, 1, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 0, 0, 1, 1, 1, 1, 2, 1, 2, 2, 1, 1]
+Query results reranked in 9.68438982963562 seconds
+Reranking for topic 819
+Iteration 1: running with k=20
+Iteration 1: running with k=13
+Iteration 2: running with k=10
+Iteration 3: running with k=8
+Iteration 4: running with k=7
+Iteration 5: running with k=7
+Iteration 6: running with k=7
+Converged. 7 topics.
+Topic counts: [ 9 25  4 17  1 20 24]
+Topic assignments: [1, 5, 5, 1, 6, 4, 1, 1, 6, 6, 6, 0, 5, 6, 5, 1, 1, 5, 5, 1, 5, 3, 6, 0, 0, 6, 5, 6, 3, 5, 5, 6, 3, 3, 6, 1, 6, 6, 5, 5, 5, 1, 0, 1, 3, 3, 1, 3, 3, 1, 5, 5, 1, 2, 6, 0, 0, 0, 1, 5, 6, 1, 1, 1, 0, 6, 6, 6, 6, 3, 6, 3, 1, 3, 3, 6, 3, 3, 3, 2, 2, 6, 1, 6, 1, 1, 0, 5, 1, 1, 3, 6, 1, 5, 5, 6, 2, 3, 5, 1]
+Query results reranked in 10.108629941940308 seconds
+Reranking for topic 341
+Iteration 1: running with k=20
+Iteration 1: running with k=12
+Iteration 2: running with k=8
+Iteration 3: running with k=8
+Iteration 4: running with k=8
+Iteration 5: running with k=8
+Converged. 8 topics.
+Topic counts: [ 5  3 55 11  9  2  2 13]
+Topic assignments: [2, 2, 7, 2, 7, 2, 1, 4, 3, 3, 0, 2, 2, 2, 5, 2, 4, 3, 2, 2, 2, 0, 2, 3, 2, 3, 5, 3, 2, 1, 2, 2, 0, 2, 2, 2, 3, 2, 2, 6, 2, 7, 7, 3, 2, 2, 7, 4, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 7, 2, 0, 4, 2, 4, 2, 4, 2, 2, 6, 2, 2, 2, 2, 7, 7, 7, 7, 2, 4, 2, 2, 2, 2, 4, 0, 2, 1, 2, 3, 2, 2, 2, 4, 3, 7, 2, 7, 7, 2]
+Query results reranked in 7.516125679016113 seconds
+Reranking for topic 422
+Iteration 1: running with k=20
+Iteration 1: running with k=12
+Iteration 2: running with k=8
+Iteration 3: running with k=7
+Iteration 4: running with k=6
+Iteration 5: running with k=5
+Iteration 6: running with k=5
+Iteration 7: running with k=5
+Iteration 8: running with k=5
+Iteration 9: running with k=5
+Iteration 10: running with k=5
+Iteration 11: running with k=5
+Iteration 12: running with k=5
+Iteration 13: running with k=5
+Iteration 14: running with k=5
+Iteration 15: running with k=5
+Iteration 16: running with k=5
+Iteration 17: running with k=5
+Iteration 18: running with k=5
+Iteration 19: running with k=5
+Maximum iterations reached. Terminated with 5 topics 
+Topic counts: [ 6 24 23 21 26]
+Topic assignments: [3, 3, 1, 1, 3, 4, 2, 1, 4, 1, 2, 3, 3, 3, 3, 3, 2, 3, 1, 4, 2, 2, 4, 4, 4, 4, 2, 4, 0, 4, 1, 0, 3, 1, 4, 0, 2, 2, 4, 3, 1, 3, 1, 3, 1, 1, 3, 4, 2, 1, 1, 1, 1, 3, 1, 4, 2, 3, 4, 4, 2, 1, 0, 2, 1, 2, 2, 1, 1, 3, 2, 4, 2, 1, 4, 3, 0, 2, 2, 2, 2, 4, 3, 1, 4, 4, 2, 1, 1, 2, 0, 3, 4, 4, 2, 4, 4, 4, 4, 3]
+Query results reranked in 20.81245255470276 seconds
+Reranking for topic 347
+Iteration 1: running with k=20
+Iteration 1: running with k=12
+Iteration 2: running with k=9
+Iteration 3: running with k=7
+Iteration 4: running with k=7
+Iteration 5: running with k=7
+Iteration 6: running with k=7
+Converged. 7 topics.
+Topic counts: [25  5 16 26  3 24  1]
+Topic assignments: [2, 2, 1, 0, 5, 0, 0, 3, 3, 1, 1, 2, 5, 3, 2, 3, 0, 5, 3, 0, 3, 3, 5, 3, 5, 2, 5, 3, 2, 5, 2, 2, 5, 5, 3, 0, 0, 0, 3, 5, 5, 3, 0, 5, 5, 5, 5, 5, 5, 5, 5, 1, 3, 1, 0, 2, 0, 3, 2, 0, 0, 0, 3, 0, 4, 2, 0, 2, 0, 4, 4, 5, 0, 0, 3, 3, 3, 3, 3, 3, 6, 2, 2, 2, 0, 3, 5, 5, 3, 0, 0, 3, 3, 5, 0, 0, 0, 2, 3, 5]
+Query results reranked in 9.271445751190186 seconds
+Reranking for topic 820
+Iteration 1: running with k=20
+Iteration 1: running with k=4
+Iteration 2: running with k=4
+Iteration 3: running with k=4
+Converged. 4 topics.
+Topic counts: [ 7  8 12 73]
+Topic assignments: [2, 2, 2, 3, 2, 1, 1, 2, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1, 0, 2, 2, 0, 0, 0, 0, 0]
+Query results reranked in 6.054941892623901 seconds
+Reranking for topic 821
+Iteration 1: running with k=20
+Iteration 1: running with k=11
+Iteration 2: running with k=6
+Iteration 3: running with k=5
+Iteration 4: running with k=4
+Iteration 5: running with k=4
+Iteration 6: running with k=4
+Iteration 7: running with k=3
+Iteration 8: running with k=3
+Iteration 9: running with k=3
+Iteration 10: running with k=3
+Iteration 11: running with k=3
+Iteration 12: running with k=3
+Iteration 13: running with k=3
+Iteration 14: running with k=3
+Iteration 15: running with k=3
+Iteration 16: running with k=3
+Iteration 17: running with k=3
+Iteration 18: running with k=3
+Iteration 19: running with k=3
+Maximum iterations reached. Terminated with 3 topics 
+Topic counts: [40  7 53]
+Topic assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 2, 2, 2, 0, 0, 1, 0, 1, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 0, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2]
+Query results reranked in 25.508260011672974 seconds
+Reranking for topic 426
+Iteration 1: running with k=20
+Iteration 1: running with k=15
+Iteration 2: running with k=10
+Iteration 3: running with k=7
+Iteration 4: running with k=5
+Iteration 5: running with k=5
+Iteration 6: running with k=5
+Converged. 5 topics.
+Topic counts: [ 9 35 50  4  2]
+Topic assignments: [1, 2, 2, 2, 2, 1, 2, 2, 2, 0, 0, 2, 1, 2, 2, 2, 1, 2, 2, 1, 3, 1, 2, 1, 1, 1, 1, 2, 1, 1, 0, 0, 0, 0, 2, 2, 1, 2, 2, 1, 2, 0, 2, 1, 1, 1, 0, 2, 1, 1, 4, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 3, 2, 4, 2, 2, 1, 2, 2, 1, 3, 3, 1, 2, 2]
+Query results reranked in 10.845719575881958 seconds
+Reranking for topic 822
+Iteration 1: running with k=20
+Iteration 1: running with k=14
+Iteration 2: running with k=11
+Iteration 3: running with k=10
+Iteration 4: running with k=9
+Iteration 5: running with k=8
+Iteration 6: running with k=8
+Iteration 7: running with k=8
+Iteration 8: running with k=7
+Iteration 9: running with k=7
+Iteration 10: running with k=7
+Converged. 7 topics.
+Topic counts: [ 5 24 17  3 30 20  1]
+Topic assignments: [4, 5, 4, 4, 4, 3, 4, 4, 4, 3, 5, 1, 4, 2, 4, 5, 1, 5, 2, 2, 5, 2, 2, 4, 4, 4, 2, 4, 5, 4, 1, 5, 4, 4, 4, 5, 5, 1, 2, 1, 3, 1, 4, 1, 2, 2, 1, 2, 6, 1, 1, 5, 4, 0, 1, 4, 2, 5, 2, 1, 1, 2, 5, 2, 0, 1, 5, 5, 4, 1, 5, 2, 1, 1, 1, 1, 4, 4, 1, 0, 0, 0, 5, 2, 5, 4, 1, 4, 5, 5, 1, 1, 4, 4, 4, 2, 4, 5, 1, 4]
+Query results reranked in 14.647540092468262 seconds
+Reranking for topic 427
+Iteration 1: running with k=20
+Iteration 1: running with k=10
+Iteration 2: running with k=7
+Iteration 3: running with k=5
+Iteration 4: running with k=5
+Converged. 5 topics.
+Topic counts: [ 5  7 11  9 68]
+Topic assignments: [4, 2, 4, 2, 4, 3, 4, 3, 2, 0, 2, 4, 4, 0, 4, 3, 4, 4, 4, 1, 3, 4, 3, 4, 4, 1, 1, 1, 1, 1, 2, 4, 4, 4, 4, 4, 4, 4, 3, 4, 4, 4, 4, 4, 4, 3, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 4, 4, 4, 4, 3, 4, 0, 0, 2, 4, 2, 2, 4, 0, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4]
+Query results reranked in 6.402094841003418 seconds
+Reranking for topic 823
+Iteration 1: running with k=20
+Iteration 1: running with k=11
+Iteration 2: running with k=8
+Iteration 3: running with k=7
+Iteration 4: running with k=5
+Iteration 5: running with k=5
+Iteration 6: running with k=5
+Converged. 5 topics.
+Topic counts: [ 2  1 38 51  8]
+Topic assignments: [2, 2, 3, 2, 4, 2, 2, 3, 3, 3, 3, 2, 2, 2, 3, 2, 2, 3, 2, 3, 2, 3, 2, 3, 2, 2, 2, 3, 0, 2, 2, 2, 2, 2, 3, 3, 2, 3, 2, 3, 2, 2, 2, 3, 2, 2, 4, 3, 3, 3, 3, 3, 3, 3, 3, 4, 3, 2, 3, 2, 3, 3, 3, 3, 2, 4, 3, 1, 2, 3, 3, 3, 2, 0, 2, 2, 3, 4, 3, 3, 4, 2, 2, 3, 3, 3, 3, 4, 4, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+Query results reranked in 9.618889093399048 seconds
+Reranking for topic 626
+Iteration 1: running with k=20
+Iteration 1: running with k=14
+Iteration 2: running with k=11
+Iteration 3: running with k=10
+Iteration 4: running with k=9
+Iteration 5: running with k=8
+Iteration 6: running with k=7
+Iteration 7: running with k=7
+Converged. 7 topics.
+Topic counts: [34  9 17  6 11  3 20]
+Topic assignments: [6, 5, 0, 0, 2, 4, 4, 2, 0, 6, 2, 0, 6, 2, 0, 0, 6, 6, 0, 6, 0, 3, 4, 0, 0, 0, 6, 2, 0, 2, 0, 0, 0, 0, 0, 6, 6, 6, 6, 0, 6, 0, 4, 0, 2, 0, 1, 3, 3, 4, 0, 1, 2, 6, 2, 4, 2, 6, 3, 3, 3, 2, 0, 0, 0, 0, 4, 4, 0, 2, 0, 2, 0, 5, 0, 0, 6, 6, 6, 5, 2, 1, 2, 2, 2, 4, 6, 0, 6, 4, 6, 1, 1, 1, 1, 1, 0, 4, 0, 1]
+Query results reranked in 13.936958312988281 seconds
+Reranking for topic 824
+Iteration 1: running with k=20
+Iteration 1: running with k=8
+Iteration 2: running with k=8
+Iteration 3: running with k=8
+Converged. 8 topics.
+Topic counts: [ 1  4 29  2  4 54  4  2]
+Topic assignments: [2, 5, 2, 5, 2, 2, 2, 5, 6, 2, 5, 2, 7, 5, 5, 5, 2, 7, 4, 2, 6, 2, 4, 0, 5, 2, 5, 2, 5, 6, 5, 5, 5, 2, 2, 2, 5, 5, 5, 5, 2, 6, 2, 2, 2, 5, 1, 5, 2, 5, 5, 5, 5, 2, 4, 5, 1, 5, 4, 5, 5, 3, 1, 5, 5, 5, 5, 5, 5, 5, 2, 5, 5, 5, 2, 3, 5, 5, 5, 2, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2, 1, 2, 2, 2]
+Query results reranked in 6.553255319595337 seconds
+Reranking for topic 825
+Iteration 1: running with k=20
+Iteration 1: running with k=12
+Iteration 2: running with k=10
+Iteration 3: running with k=9
+Iteration 4: running with k=7
+Iteration 5: running with k=7
+Iteration 6: running with k=7
+Converged. 7 topics.
+Topic counts: [ 2  2  9 20 37 25  5]
+Topic assignments: [5, 5, 5, 4, 5, 3, 4, 3, 3, 4, 2, 6, 3, 4, 4, 4, 4, 5, 3, 4, 4, 4, 5, 1, 5, 3, 4, 4, 4, 4, 5, 5, 3, 5, 5, 5, 5, 4, 3, 2, 6, 2, 2, 3, 4, 5, 4, 3, 3, 3, 0, 0, 5, 3, 3, 4, 5, 1, 4, 3, 5, 3, 4, 4, 4, 5, 2, 2, 2, 3, 2, 4, 4, 5, 4, 6, 6, 4, 4, 4, 5, 3, 6, 4, 5, 4, 3, 4, 4, 4, 4, 5, 3, 2, 5, 5, 5, 4, 4, 4]
+Query results reranked in 12.54098916053772 seconds
+Wrote results to /results/results-RERANK-N100-GREEDY.txt
