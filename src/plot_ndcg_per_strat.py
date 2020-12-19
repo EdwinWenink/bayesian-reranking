@@ -20,7 +20,7 @@ def autolabel(bars):
 
 Nx = 3
 x = np.arange(Nx)
-width = 0.25
+width = 0.20
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
