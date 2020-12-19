@@ -63,7 +63,7 @@ def plot(all_results, metric, stats, N, strategy, ymin=-1, ymax=1, output_path="
     ax.set_xlabel('Topics')
     ax.set_ylabel('Difference w.r.t baseline')
     ax.set_ylim(ymin, ymax)
-    output_fn = os.path.join(output_path, f'{N}_{strategy}_per_query_{metric}.pdf')
+    output_fn = os.path.join(output_path, f'{N}-{strategy}_per_query_{metric}.pdf')
     plt.savefig(output_fn, bbox_inches='tight', format='pdf')
 
 if __name__ == '__main__':
