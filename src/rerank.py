@@ -18,7 +18,7 @@ from functools import partial
 
 class Bayesian_Reranker():
     
-    def __init__(self, strategy="GREEDY", seed=0, max_iter=20):
+    def __init__(self, strategy="GREEDY", seed=2020, max_iter=20):
         self.seed = seed
         self.max_iter = max_iter
         self.utils = Utils()
