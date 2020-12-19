@@ -14,6 +14,7 @@ from utils import Utils
 import itertools
 import time
 from functools import partial
+import pickle
 
 
 class Bayesian_Reranker():
@@ -30,7 +31,7 @@ class Bayesian_Reranker():
         self.strategy = strategy
     
         # K to use in TOP-K-AVG strategy
-        self.top_k = 10 
+        self.top_k = 5
 
         # TODO ideally we don't want to first rank every time for the reranking 
         self.baseline = BaselineBM25(k=self.N)
@@ -221,13 +222,18 @@ class Bayesian_Reranker():
             # So give fake relevance scores instead
             reranked_doc_scores[id] = list(range(self.N, 0, -1))
 
+        #pickle dictionairy
+        with open(f"reranked_doc_ids-N00-top-5-AVG.pickle", 'wb') as handle:
+            pickle.dump(reranked_doc_ids, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
         # Write ranking in suitable format for trec_eval
         self.write(reranked_doc_ids, reranked_doc_scores, strategy)
 
+        
 
 if __name__ == "__main__":
-    #strategies = ["TOP-K-AVG"]
-    strategies = ["GREEDY"]
+    strategies = ["TOP-K-AVG"]
+    #strategies = ["GREEDY"]
     for strategy in strategies:
         reranker = Bayesian_Reranker(strategy=strategy)
         reranker.rerank()
