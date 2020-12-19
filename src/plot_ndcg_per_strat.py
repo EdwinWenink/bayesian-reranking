@@ -41,5 +41,5 @@ autolabel(bars2)
 autolabel(bars3)
 
 plt.tight_layout()
-plt.savefig('../results/eval/plot_ndcg_per_strat.pdf', format='pdf')
+#plt.savefig('../results/eval/plot_ndcg_per_strat.pdf', format='pdf', bbox_inches='tight')
 plt.show()
