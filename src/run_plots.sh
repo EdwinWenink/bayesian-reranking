@@ -9,6 +9,6 @@ do
     for STRAT in "${STRATS[@]}"
     do
         echo $METRIC $STRAT
-        python compare_runs_fork.py --metric $METRIC --qrels ../results/qrels.core18.txt --base ../results/results-BASELINE-$N.txt --comparison ../results/results-RERANK-$N-$STRAT.txt --N $N --strategy $STRAT
+        python compare_runs_fork.py --metric $METRIC --qrels ../results/qrels.core18.txt --base ../results/results-BASELINE-$N.txt --comparison ../results/results-RERANK-$N-$STRAT.txt --N $N --strategy $STRAT > ../results/eval/comparison-$N-$STRAT-${METRIC/./_}.txt
     done
 done
