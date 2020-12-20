@@ -3,9 +3,12 @@ import matplotlib.pyplot as plt
 
 # @5 @10 @20
 base = (0.4741, 0.4312, 0.41)
-greedy = (0.3932, 0.3592, 0.3396)
-top5avg = (0.3835, 0.3541, 0.3367)
-top10avg = (0.3812, 0.3495, 0.3341)  # currently not used
+greedy = (0.4211, 0.3715, 0.3505)
+top5avg = (0.4086, 0.3621, 0.3431)
+#oude scores voor de geval dat (seed = 0)
+#greedy = (0.3932, 0.3592, 0.3396)
+#top5avg = (0.3835, 0.3541, 0.3367)
+#top10avg = (0.3812, 0.3495, 0.3341)  # currently not used
 
 def autolabel(bars):
     for bar in bars:
