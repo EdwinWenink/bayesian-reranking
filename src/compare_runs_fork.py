@@ -138,7 +138,11 @@ if __name__ == '__main__':
 
     stats = scipy.stats.ttest_rel(a, b)
     print(f'base mean: {np.mean(a):.4}')
+    print(f'base std: {np.std(a):.4}')
+    print(f'base sem: {scipy.stats.sem(a):.4}')
     print(f'comp mean: {np.mean(b):.4}')
+    print(f'comp std: {np.std(b):.4}')
+    print(f'comp sem: {scipy.stats.sem(b):.4}')
     print(f't-statistic: {stats[0]:.6}, p-value: {stats[1]:.6}')
     print(f'better (diff > 0.01): {num_better:>3}')
     print(f'worse  (diff > 0.01): {num_worse:>3}')
