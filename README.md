@@ -4,6 +4,7 @@ Information Retrieval Project, 2020 @ Radboud University
 
 The main file of this project is `src/rerank.py`.
 It produces a baseline ranking using Anserini's BM25 implementation, and then re-ranks this initial ranking using topic modelling and a given re-ranking strategy.
+All relative paths currently used in the scripts assume you are running from the `src` folder.
 
 There are several other scripts for running analyses and plotting results.
 There are also several scripts that demo the functionality of Anserini or LDA.
