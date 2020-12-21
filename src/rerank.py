@@ -19,6 +19,10 @@ from functools import partial
 class Bayesian_Reranker():
     
     def __init__(self, strategy="GREEDY", seed=2020, max_iter=20):
+        """
+        This class produces a baseline BM25 ranking and uses LDA topic modelling
+        in combination with the general re-ranking procedure of Huang and Hu (2009)
+        """
         self.seed = seed
         self.max_iter = max_iter
         self.utils = Utils()
@@ -54,8 +58,6 @@ class Bayesian_Reranker():
         self.query_ids = self.baseline.get_query_ids()
 
         # Next line returns preprocessed documents per query 
-        # TODO; this takes RAW terms, including metadata etc., which may not be ideal
-        # I'd prefer to only have the contents, but `contents` property is not currently available in our index
         docs_per_query = { query_id: [ reader.analyze( reader.doc(hit.docid).raw()) for hit in hits] for query_id, hits in self.batch_hits.items() }
 
         # Prepare bag-of-words dataset for gensim
@@ -125,7 +127,8 @@ class Bayesian_Reranker():
             3: [(array([2], dtype=int64),)]})
         """
 
-    #helper functions
+    # HELPER FUNCTIONS
+    # ----------------
     
     #finds longest list
     def find_max_list(self, lst):
@@ -196,6 +199,9 @@ class Bayesian_Reranker():
         self.utils.write_rankings(self.query_ids, reranked_doc_ids, reranked_doc_scores, run_name)
 
     def rerank(self):
+        '''
+        Repeat re-ranking procedure for each TREC topic
+        '''
         # Original document ids and scores
         doc_ids = self.baseline.get_doc_ids()
         scores = self.baseline.get_scores()
@@ -217,7 +223,7 @@ class Bayesian_Reranker():
             # Store rankings in a dictionary
             reranked_doc_ids[id] = reranked_ids
             #reranked_doc_scores[id] = reranked_scores
-            # It looks like trec_eval first sorts the rankings on scores, nullifying the reranking
+            # trec_eval first sorts the rankings on scores, nullifying the reranking
             # So give fake relevance scores instead
             reranked_doc_scores[id] = list(range(self.N, 0, -1))
 
