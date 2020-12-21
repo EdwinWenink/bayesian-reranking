@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+results/eval.base
+results/eval.comp
+
 # C extensions
 *.so
 
