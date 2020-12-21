@@ -49,7 +49,11 @@
 824	0.4553	0.4087	-0.0466
 825	0.7725	0.642	-0.1305
 base mean: 0.3941
+base std: 0.2258
+base sem: 0.03226
 comp mean: 0.3674
+comp std: 0.2066
+comp sem: 0.02951
 t-statistic: 4.42669, p-value: 5.34574e-05
 better (diff > 0.01):   5
 worse  (diff > 0.01):  26
