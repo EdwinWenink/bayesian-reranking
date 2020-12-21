@@ -9,6 +9,8 @@ All relative paths currently used in the scripts assume you are running from the
 There are several other scripts for running analyses and plotting results.
 There are also several scripts that demo the functionality of Anserini or LDA.
 
+For our findings, see the [report](./report.pdf).
+
 ## Indexing
 
 Our indexing command:
